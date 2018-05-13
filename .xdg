@@ -1,0 +1,9 @@
+# XDG Base Directory に基づく設定
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+export RANDFILE="$XDG_DATA_HOME/.rnd"
+export GEM_HOME="$XDG_DATA_HOME/gem"
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
+export DATAGRIP_PROPERTIES="$XDG_CONFIG_HOME/DataGrip/idea.properties"

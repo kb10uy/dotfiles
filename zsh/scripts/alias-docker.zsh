@@ -1,0 +1,8 @@
+alias dcb='docker-compose build'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+alias dcer='docker-compose exec -u 0'
+alias dce='docker-compose exec -u 1000'
+alias dsp='docker system prune'
+alias dcls='docker container ls'
+alias dlg='docker logs'
