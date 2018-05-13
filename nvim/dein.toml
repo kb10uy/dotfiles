@@ -1,0 +1,49 @@
+# Required
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# Colorschemes
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+# Filetypes
+
+[[plugins]]
+repo = 'dag/vim2hs'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+# functions
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo = 'alpaca-tc/vim-endwise.git'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
