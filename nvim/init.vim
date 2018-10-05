@@ -1,7 +1,4 @@
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
-let g:python3_host_prog=expand('~/.pyenv/versions/3.6.4/bin/python3')
-let g:python_host_prog=expand('~/.pyenv/versions/2.7.14/bin/python2')
+" dein セットアップ -----------------------------------------------------
 let s:localpath = '/home/kb10uy/.local/share/nvim/'
 let s:deinpath = s:localpath . 'repos/github.com/Shougo/dein.vim'
 let s:initpath = fnamemodify(expand('<sfile>'), ':h')
@@ -16,33 +13,38 @@ if dein#load_state(s:localpath)
   call dein#save_state()
 endif
 
+" 各種設定 ----------------------------------------------------------------
+let g:python3_host_prog=expand('~/.pyenv/versions/3.6.4/bin/python3')
+let g:python_host_prog=expand('~/.pyenv/versions/2.7.14/bin/python2')
+
 filetype plugin indent on
 syntax enable
-
-"End dein Scripts-------------------------
-
 language ja_JP.UTF-8
-set helplang=ja,en
 
+set helplang=ja,en
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 set expandtab
-set title
 set wildmenu
 set cmdheight=2
 set laststatus=2
 set inccommand=split
 set encoding=utf8
 set fileencodings=utf8
-set t_ut=
 set mouse=a
 set notitle
-
-set ruler 
+set ruler
 set number
 
+autocmd VimEnter * call RemapKeys()
+autocmd VimEnter * call SetColorScheme()
+
+" 起動時にやるやつ ----------------------------------------------------
+
+" キーマップを魔改造する
 function! RemapKeys()
+  " FPS仕様
   noremap <nowait>a h
   noremap <nowait>s j
   noremap <nowait>w k
@@ -52,18 +54,16 @@ function! RemapKeys()
   noremap <nowait><lt> <Home>
   noremap <nowait>> <End>
   noremap e c
-  noremap q d
+  noremap q "_d
   noremap r y
-  noremap ee cc
-  noremap qq dd
+  noremap ee cc<Esc>
+  noremap qq "_dd
   noremap rr yy
   noremap f p
   noremap z u
   noremap Z <C-r>
-  noremap x x
+  noremap x "_x
   noremap ?? <lt><lt>
-  noremap <nowait>c i
-  noremap <nowait>C I
   noremap <Home> <Nop>
   noremap <End> <Nop>
   noremap <Up> <Nop>
@@ -74,23 +74,33 @@ function! RemapKeys()
   inoremap <Down> <Nop>
   inoremap <Left> <Nop>
   inoremap <Right> <Nop>
+
+  " vim-surround
+  nmap E cs
+  nmap Q ds
+  nmap R ys
+
+  " 打ちやすさ重視
+  nmap RIW ysiw
   set backspace=
 endfunction
 
-function! Solarize()
-" let g:solarized_termcolors=256
+" colorschemeを設定する
+function! SetColorScheme()
+  " let g:solarized_termcolors=256
+  set background=dark
   colorscheme solarized
-  set background=dark
+
+  " VSCodeのターミナルなどは対応してなさげなので
+  if $COLORTERM !=# 'truecolor' && $COLORTERM !=# '24bit'
+    let g:solarized_termcolors=256
+  endif
+
+  " 背景透過できるターミナル用
+  if !empty($TRANSPARENTTERM) || !empty($GNOME_TERMINAL_SCREEN)
+    " 背景色を無しにする
+    highlight Normal ctermbg=NONE
+    highlight clear CursorLine
+  endif
 endfunction
 
-function! Molokaize()
-  colorscheme molokai
-endfunction
-
-function! Hybridize()
-  colorscheme hybrid
-  set background=dark
-endfunction
-
-autocmd VimEnter * call Hybridize()
-autocmd VimEnter * call RemapKeys()

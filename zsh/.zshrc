@@ -6,6 +6,7 @@ source "$ZDOTDIR/loaddeps.zsh"
 if [ -f "$HOME/.zplug/init.zsh" ]; then
   source "$HOME/.zplug/init.zsh"
 
+  zplug 'zplug/zplug', hook-build:'zplug --self-manage'
   zplug "$ZDOTDIR/scripts", from:local, use:"*.zsh"
 
   zplug load

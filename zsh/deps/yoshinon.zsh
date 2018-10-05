@@ -2,23 +2,10 @@ alias vim='nvim'
 alias ocaml='rlwrap ocaml'
 alias dpsql='PGPASSWORD=j3pWNtxAnI0fKWzt psql -h localhost'
 
-export PYENV_ROOT="$HOME/.pyenv"
-export VISUAL="nvim"
-
-local CUSTOM_PATHS=(
-  /usr/local/go/bin
-  /usr/local/ssl/bin
-  /usr/local/bin
-  $HOME/.rbenv/bin
-  $PYENV_ROOT/bin
-  $HOME/.composer/vendor/bin
-  $HOME/.config/composer/vendor/bin
-  $LOCAL_ROOT/bin
-  $HOME/.nodebrew/current/bin
-  $HOME/.opam/system/bin
-  /usr/local/texlive/2018/bin/x86_64-linux
-)
-export PATH="${(pj:\x3a:)CUSTOM_PATHS}:$PATH"
+function {
+  local REALDIR=$(dirname $(readlink -f "$1"))
+  source $REALDIR/yoshinon.env.zsh
+} $0
 
 eval "$(pyenv init -)"
 
@@ -27,6 +14,11 @@ ssh-yucky() {
   local id=~/.ssh/yucky_t2micro.pem
   local ip=$(aws ec2 describe-instances --instance-ids i-031199e932fd984a4 | grep PublicDnsName | head -n 1 | awk -F ":" '{print $2}' | sed 's/[",[:blank:]]//g')
   ssh $user@$ip -i $id
+}
+
+exec-forward-terminal() {
+  export LIBGL_ALWAYS_INDIRECT=1
+  lxterminal
 }
 
 http-up() {
