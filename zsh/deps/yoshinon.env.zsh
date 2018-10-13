@@ -17,5 +17,3 @@ local CUSTOM_PATHS=(
   $HOME/.nimble/bin
   /usr/local/texlive/2018/bin/x86_64-linux
 )
-export PATH="${(pj:\x3a:)CUSTOM_PATHS}:$PATH"
-echo "うんこ💩"
