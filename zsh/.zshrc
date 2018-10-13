@@ -20,8 +20,3 @@ source "$ZDOTDIR/.zkbd/xterm-256color-:0"
 [[ -n "${key[Delete]}" ]] && bindkey "${key[Delete]}" delete-char
 [[ -n "${key[PageUp]}" ]] && bindkey "${key[PageUp]}" beginning-of-buffer-or-history
 [[ -n "${key[PageDown]}" ]] && bindkey "${key[PageDown]}" end-of-buffer-or-history
-
-# for profiling
-if (which zprof > /dev/null 2>&1) ;then
-  zprof
-fi
