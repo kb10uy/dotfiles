@@ -1,8 +1,6 @@
 export PYENV_ROOT="$HOME/.pyenv"
 export VISUAL="nvim"
 
-echo $PATH
-
 local CUSTOM_PATHS=(
   /usr/local/go/bin
   /usr/local/ssl/bin
