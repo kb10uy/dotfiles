@@ -1,13 +1,13 @@
 export LANG=ja_JP.UTF-8
 
-source "$ZDOTDIR/loaddeps.zsh"
-
 # zplug
 if [ -f "$HOME/.zplug/init.zsh" ]; then
   source "$HOME/.zplug/init.zsh"
 
   zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-  zplug "$ZDOTDIR/scripts", from:local, use:"*.zsh"
+  zplug 'kb10uy/zsh-starter'
+  zplug 'kb10uy/zsh-docker-utils'
+  zplug 'kb10uy/zsh-theme-furry-umbrella'
 
   zplug load
 fi
