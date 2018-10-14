@@ -2,6 +2,11 @@ alias vim='nvim'
 alias ocaml='rlwrap ocaml'
 alias dpsql='PGPASSWORD=j3pWNtxAnI0fKWzt psql -h localhost'
 
+# gnome-terminalなら多分透過してるので TRANSPARENTTERM をセットしておく
+if [[ ! -z ${GNOME_TERMINAL_SCREEN+x} ]]; then
+  export TRANSPARENTTERM='gnome-terminal'
+fi
+
 function {
   local REALDIR=$(dirname $(readlink -f "$1"))
   source $REALDIR/yoshinon.env.zsh

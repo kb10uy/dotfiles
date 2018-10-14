@@ -8,6 +8,9 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
 
+[[plugins]]
+repo = 'lifepillar/vim-solarized8'
+
 # Filetypes
 
 [[plugins]]

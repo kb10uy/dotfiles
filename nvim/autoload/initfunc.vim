@@ -1,17 +1,43 @@
 " colorschemeを設定する
 function initfunc#set_colorscheme()
+  " TrueColor && Transparented
+  " e.g. gnome-terminal
+  " $COLORTERM (自動申告) と $TRANSPARENTTERM (手動申告) が
+  " 利用される
+  "
+  " TrueColor && Opaque
+  " e.g. iTerm2, PuTTY (SSH変数透過で自己申告)
+  " $COLORTERM が利用される
+  "
+  " 256 Color && Transparented
+  " $TRANSPARENTTERMが利用される
+  "
+  " 256 Color && Opaque
+  " e.g. VSCode Integrated Terminal
+  " 何も起きない
+  "
+  " Solarized && Transparent
+  " $SOLARIZEDTERM (手動申告) と $TRANSPARENTTERM が利用される
+  "
+  " Solarized && Opaque
+  " e.g. JuiceSSH
+  " $SOLARIZEDTERM が利用される
+
   set background=dark
-  " VSCodeのターミナルなどは対応してなさげなので
-  if $COLORTERM !=# 'truecolor' && $COLORTERM !=# '24bit'
-    let g:solarized_termcolors=256
+
+  if $COLORTERM ==# 'truecolor' || $COLORTERM ==# '24bit'
+    set termguicolors
+    colorscheme solarized8
+  else
+    if empty($SOLARIZEDTERM)
+      let g:solarized_termcolors=256
+    endif
+    colorscheme solarized
   endif
 
-  colorscheme solarized
-
-  " 背景透過できるターミナル用
-  if !empty($TRANSPARENTTERM) || !empty($GNOME_TERMINAL_SCREEN)
-    " 背景色を無しにする
+  if !empty($TRANSPARENTTERM)
     highlight Normal ctermbg=NONE
+    highlight Normal guibg=NONE
     highlight clear CursorLine
   endif
 endfunction
