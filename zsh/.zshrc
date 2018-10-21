@@ -5,6 +5,7 @@ if [ -f "$HOME/.zplug/init.zsh" ]; then
   source "$HOME/.zplug/init.zsh"
 
   zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+  zplug 'joel-porquet/zsh-dircolors-solarized', use:'zsh-dircolors-solarized.zsh'
   zplug 'kb10uy/zsh-starter'
   zplug 'kb10uy/zsh-docker-utils'
   zplug 'kb10uy/zsh-theme-furry-umbrella'

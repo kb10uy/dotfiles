@@ -7,6 +7,7 @@ local CUSTOM_PATHS=(
   /usr/local/bin
   $HOME/.rbenv/bin
   $PYENV_ROOT/bin
+  $HOME/.cargo/bin
   $HOME/.composer/vendor/bin
   $HOME/.config/composer/vendor/bin
   $LOCAL_ROOT/bin
@@ -15,3 +16,6 @@ local CUSTOM_PATHS=(
   $HOME/.nimble/bin
   /usr/local/texlive/2018/bin/x86_64-linux
 )
+
+export PATH="${(pj:\x3a:)CUSTOM_PATHS}:$PATH"
+
