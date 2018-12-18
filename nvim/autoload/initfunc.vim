@@ -6,7 +6,7 @@ function initfunc#set_colorscheme()
   " 利用される
   "
   " TrueColor && Opaque
-  " e.g. iTerm2, PuTTY (SSH変数透過で自己申告)
+  " e.g. iTerm2, PuTTY, NyaoVim (SSH変数透過で自己申告)
   " $COLORTERM が利用される
   "
   " 256 Color && Transparented
@@ -27,6 +27,10 @@ function initfunc#set_colorscheme()
 
   if $COLORTERM ==# 'truecolor' || $COLORTERM ==# '24bit'
     set termguicolors
+    if $TERM ==# 'screen-256color'
+      let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+      let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+    endif
     colorscheme solarized8
   else
     if empty($SOLARIZEDTERM)
@@ -35,7 +39,7 @@ function initfunc#set_colorscheme()
     colorscheme solarized
   endif
 
-  if !empty($TRANSPARENTTERM)
+  if !empty($TRANSPARENTTERM) && !exists('g:nyaovim_version')
     highlight Normal ctermbg=NONE
     highlight Normal guibg=NONE
     highlight clear CursorLine
@@ -56,9 +60,9 @@ function initfunc#remap_keys()
   noremap e c
   noremap q "_d
   noremap r y
-  noremap ee cc<Esc>
-  noremap qq "_dd
-  noremap rr yy
+  nnoremap ee cc<Esc>
+  nnoremap qq "_dd
+  nnoremap rr yy
   noremap f p
   noremap z u
   noremap Z <C-r>

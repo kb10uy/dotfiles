@@ -20,6 +20,8 @@ repo = 'dag/vim2hs'
 repo = 'cespare/vim-toml'
 
 # functions
+[[plugins]]
+repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
