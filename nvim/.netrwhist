@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/kb10uy/.config/zsh'
 let g:netrw_dirhist_2='/home/kb10uy/web/images/db'
 let g:netrw_dirhist_3='/home/kb10uy/web/images/nginx'
 let g:netrw_dirhist_4='/home/kb10uy/web/images/redis'
+let g:netrw_dirhist_5='/home/kb10uy/TUS/is-experiment1/section3/src/org/kb10uy/tus'
+let g:netrw_dirhist_6='/home/kb10uy/dotfiles/nvim/autoload'
+let g:netrw_dirhist_7='/home/kb10uy/TUS/is-experiment1/section3/src/org/kb10uy/tus'
+let g:netrw_dirhist_8='/home/kb10uy/web/data/nginx/conf.d/sites-macro'

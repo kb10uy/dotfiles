@@ -37,6 +37,11 @@ set notitle
 set ruler
 set number
 
-call initfunc#set_colorscheme()
-autocmd VimEnter * call initfunc#remap_keys()
+if v:vim_did_enter
+  call initfunc#set_colorscheme()
+  call initfunc#remap_keys()
+else
+  autocmd VimEnter * call initfunc#set_colorscheme()
+  autocmd VimEnter * call initfunc#remap_keys()
+endif
 
