@@ -1,5 +1,5 @@
 " dein セットアップ -----------------------------------------------------
-let s:localpath = '/home/kb10uy/.local/share/nvim/'
+let s:localpath = $HOME . '/.local/share/nvim/'
 let s:deinpath = s:localpath . 'repos/github.com/Shougo/dein.vim'
 let s:initpath = fnamemodify(expand('<sfile>'), ':h')
 let &runtimepath = &runtimepath . ',' . s:deinpath
