@@ -13,6 +13,7 @@ function {
 } $0
 
 eval "$(pyenv init -)"
+source ~/.phpbrew/bashrc
 
 ssh-yucky() {
   local user=ubuntu
