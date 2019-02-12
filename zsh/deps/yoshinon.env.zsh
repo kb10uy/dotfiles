@@ -17,4 +17,4 @@ local CUSTOM_PATHS=(
 )
 
 export PATH="${(pj:\x3a:)CUSTOM_PATHS}:$PATH"
-
+export PATH_IS_SET=1

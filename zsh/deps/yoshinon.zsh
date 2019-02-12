@@ -7,41 +7,9 @@ if [[ ! -z ${GNOME_TERMINAL_SCREEN+x} ]]; then
   export TRANSPARENTTERM='gnome-terminal'
 fi
 
-function {
-  local REALDIR=$(dirname $(readlink -f "$1"))
-  source $REALDIR/yoshinon.env.zsh
-} $0
-
 eval "$(pyenv init -)"
-source ~/.phpbrew/bashrc
-
-ssh-yucky() {
-  local user=ubuntu
-  local id=~/.ssh/yucky_t2micro.pem
-  local ip=$(aws ec2 describe-instances --instance-ids i-031199e932fd984a4 | grep PublicDnsName | head -n 1 | awk -F ":" '{print $2}' | sed 's/[",[:blank:]]//g')
-  ssh $user@$ip -i $id
-}
-
-exec-forward-terminal() {
-  export LIBGL_ALWAYS_INDIRECT=1
-  lxterminal
-}
-
-http-up() {
-  sudo ufw allow 80
-  sudo ufw allow 443
-  yes | sudo ufw enable
-}
-
-http-down() {
-  sudo ufw reject 80
-  sudo ufw reject 443
-  yes | sudo ufw enable
-}
-
-pacman-vacuum() {
-  sudo pacman -Rs --noconfirm $(pacman -Qdtq)
-}
+eval "$(rbenv init -)"
+source $HOME/.phpbrew/bashrc
 
 lost() {
   echo '失くした物は何ですか 出逢えます 必ずや'
