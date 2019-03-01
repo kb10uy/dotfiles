@@ -17,8 +17,8 @@ fi
 
 # ミキサーを復元
 alsactl --file ~/.config/alsa/asound.state restore
-# JACK起動(自動的にPAも)
-# qjackctl &
+
+xset r rate 400 20
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
@@ -30,3 +30,4 @@ function {
   local REALDIR=$(dirname $(readlink -f "$1"))
   source "$REALDIR/zsh/deps/yoshinon.env.zsh"
 } $0
+

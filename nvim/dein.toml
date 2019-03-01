@@ -19,6 +19,9 @@ repo = 'dag/vim2hs'
 [[plugins]]
 repo = 'cespare/vim-toml'
 
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
 # functions
 [[plugins]]
 repo = 'mattn/emmet-vim'

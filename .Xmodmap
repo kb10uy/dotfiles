@@ -1,2 +1,6 @@
+clear Control
+clear Lock
 keycode 66 = Control_L
 keycode 254 = Muhenkan
+add Control = Control_L Control_R
+add Mod4 = Hiragana_Katakana
