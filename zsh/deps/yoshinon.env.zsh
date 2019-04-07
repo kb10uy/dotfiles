@@ -16,5 +16,5 @@ local CUSTOM_PATHS=(
   /usr/local/texlive/2018/bin/x86_64-linux
 )
 
-export PATH="${(pj:\x3a:)CUSTOM_PATHS}:$PATH"
+export PATH="$(echo $PATH | sed -re 's/\s+/:/g'):$PATH"
 export PATH_IS_SET=1
