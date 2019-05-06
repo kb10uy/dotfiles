@@ -14,13 +14,13 @@ repo = 'lifepillar/vim-solarized8'
 # Filetypes
 
 [[plugins]]
-repo = 'dag/vim2hs'
-
-[[plugins]]
 repo = 'cespare/vim-toml'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'neovimhaskell/haskell-vim'
 
 # functions
 [[plugins]]
@@ -28,6 +28,9 @@ repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
@@ -40,3 +43,7 @@ repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = "autozimu/LanguageClient-neovim"
+build = "bash install.sh"

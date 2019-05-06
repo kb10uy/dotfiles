@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/kb10uy/sandbox/pg_alpine'
 let g:netrw_dirhist_2='/home/kb10uy/projects/zshell-plugins/zsh-starter'
 let g:netrw_dirhist_3='/home/kb10uy/projects/einsamkeit2/server/web'
 let g:netrw_dirhist_4='/home/kb10uy/sandbox/i3don'
+let g:netrw_dirhist_5='/home/kb10uy/web/images/workspace'
+let g:netrw_dirhist_6='/home/kb10uy/web/images/redis'

@@ -14,9 +14,6 @@ if dein#load_state(s:localpath)
 endif
 
 " 各種設定 ----------------------------------------------------------------
-let g:python3_host_prog=expand('~/.pyenv/versions/3.6.4/bin/python3')
-let g:python_host_prog=expand('~/.pyenv/versions/2.7.14/bin/python2')
-
 filetype plugin indent on
 syntax enable
 language ja_JP.UTF-8
@@ -34,6 +31,7 @@ set encoding=utf8
 set fileencodings=utf8
 set mouse=a
 set notitle
+set nofoldenable
 set ruler
 set number
 
