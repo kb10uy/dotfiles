@@ -3,6 +3,9 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
 # Colorschemes
 
 [[plugins]]
@@ -22,28 +25,48 @@ repo = 'leafgarland/typescript-vim'
 [[plugins]]
 repo = 'neovimhaskell/haskell-vim'
 
-# functions
 [[plugins]]
-repo = 'mattn/emmet-vim'
+repo = 'rust-lang/rust.vim'
 
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
-repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'alpaca-tc/vim-endwise.git'
-
-[[plugins]]
-repo = 'editorconfig/editorconfig-vim'
+# General
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
 
 [[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+# IDE features
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
+
+[[plugins]]
 repo = "autozimu/LanguageClient-neovim"
+rev = "next"
 build = "bash install.sh"
+hook_add = '''
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'beta', 'rls'],
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+'''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+# Operators
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+
+[[plugins]]
+repo = 'alpaca-tc/vim-endwise.git'
+

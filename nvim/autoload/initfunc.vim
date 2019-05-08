@@ -79,13 +79,11 @@ function initfunc#remap_keys()
   inoremap <Left> <Nop>
   inoremap <Right> <Nop>
 
-  " vim-surround
-  nmap E cs
-  nmap Q ds
-  nmap R ys
+  " vim-operator-surround
+  nmap <silent>R <Plug>(operator-surround-append)
+  nmap <silent>E <Plug>(operator-surround-replace)
+  nmap <silent>Q <Plug>(operator-surround-delete)
 
-  " 打ちやすさ重視
-  nmap RIW ysiw
   set backspace=
 endfunction
 
