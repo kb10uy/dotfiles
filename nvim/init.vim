@@ -7,6 +7,7 @@ if dein#load_state(s:localpath)
   call dein#begin(s:localpath)
   " for remote plugins
   call dein#load_toml(s:initpath . '/dein.toml')
+  call dein#load_toml(s:initpath . '/dein-lazy.toml', {'lazy': 1})
   " for local plugins
   call dein#local(s:localpath . 'plugins/', {}, ['*'])
   call dein#end()
@@ -22,6 +23,7 @@ set helplang=ja,en
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
+set backspace=
 set expandtab
 set wildmenu
 set cmdheight=2
@@ -35,11 +37,6 @@ set nofoldenable
 set ruler
 set number
 
-if v:vim_did_enter
-  call initfunc#set_colorscheme()
-  call initfunc#remap_keys()
-else
-  autocmd VimEnter * call initfunc#set_colorscheme()
-  autocmd VimEnter * call initfunc#remap_keys()
-endif
+call keymap#remap()
+call colorscheme#set_colorscheme()
 

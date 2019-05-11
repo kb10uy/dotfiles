@@ -3,9 +3,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-
 # Colorschemes
 
 [[plugins]]
@@ -14,31 +11,10 @@ repo = 'altercation/vim-colors-solarized'
 [[plugins]]
 repo = 'lifepillar/vim-solarized8'
 
-# Filetypes
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'neovimhaskell/haskell-vim'
-
-[[plugins]]
-repo = 'rust-lang/rust.vim'
-
-# General
-
-[[plugins]]
-repo = 'vim-jp/vimdoc-ja'
-
-[[plugins]]
-repo = 'editorconfig/editorconfig-vim'
-
 # IDE features
 
 [[plugins]]
+
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
@@ -59,14 +35,4 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-
-# Operators
-[[plugins]]
-repo = 'kana/vim-operator-user'
-
-[[plugins]]
-repo = 'rhysd/vim-operator-surround'
-
-[[plugins]]
-repo = 'alpaca-tc/vim-endwise.git'
 

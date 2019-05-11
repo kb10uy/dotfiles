@@ -14,7 +14,7 @@ CUSTOM_PATHS=(
   $LOCAL_ROOT/bin
   $HOME/.nodebrew/current/bin
   $HOME/.opam/system/bin
-  /usr/local/texlive/2018/bin/x86_64-linux
+  /usr/local/texlive/2019/bin/x86_64-linux
 )
 
 export PATH="$(echo ${CUSTOM_PATHS[@]} | sed -re 's/\s+/:/g'):$PATH"
