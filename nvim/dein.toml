@@ -11,28 +11,3 @@ repo = 'altercation/vim-colors-solarized'
 [[plugins]]
 repo = 'lifepillar/vim-solarized8'
 
-# IDE features
-
-[[plugins]]
-
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-let g:deoplete#enable_at_startup = 1
-'''
-
-[[plugins]]
-repo = "autozimu/LanguageClient-neovim"
-rev = "next"
-build = "bash install.sh"
-hook_add = '''
-set hidden
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'beta', 'rls'],
-    \ }
-
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-'''
-
-[[plugins]]
-repo = 'mattn/emmet-vim'
-

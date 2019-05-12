@@ -33,17 +33,24 @@ on_i = 1
 # IDE features
 
 [[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
+on_ft = ['rust', 'c', 'cpp']
+on_i = 1
+
+[[plugins]]
 repo = "autozimu/LanguageClient-neovim"
 rev = "next"
 build = "bash install.sh"
 hook_add = '''
 set hidden
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'beta', 'rls'],
-    \ }
-
+let g:LanguageClient_diagnosticsSignsMax = 2
+set signcolumn=yes
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 '''
+on_ft = ['rust', 'c', 'cpp']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
@@ -57,6 +64,7 @@ repo = 'kana/vim-operator-user'
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
 depends = ['vim-operator-user']
+on_i = 1
 
 [[plugins]]
 repo = 'alpaca-tc/vim-endwise.git'

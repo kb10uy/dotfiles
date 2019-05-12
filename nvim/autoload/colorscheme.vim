@@ -1,4 +1,3 @@
-" colorschemeを設定する
 function! colorscheme#set_colorscheme()
   " TrueColor && Transparented
   " e.g. gnome-terminal
@@ -22,15 +21,10 @@ function! colorscheme#set_colorscheme()
   " Solarized && Opaque
   " e.g. JuiceSSH
   " $SOLARIZEDTERM が利用される
-
+  "
   set background=dark
-
   if colorscheme#has_truecolor()
     set termguicolors
-    if $TERM ==# 'screen-256color'
-      let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-      let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-    endif
     colorscheme solarized8
   else
     if !colorscheme#has_solarized_palette()
@@ -38,12 +32,17 @@ function! colorscheme#set_colorscheme()
     endif
     colorscheme solarized
   endif
+  call colorscheme#override_colorscheme()
+endfunction
 
+function! colorscheme#override_colorscheme()
   if colorscheme#has_transparent_bg()
     highlight Normal ctermbg=NONE
     highlight Normal guibg=NONE
     highlight clear CursorLine
   endif
+  highlight Pmenu ctermbg=12 guibg=#2a4f54
+  highlight PmenuSel ctermbg=13 gui=reverse,bold guibg=#2a4f54
 endfunction
 
 function! colorscheme#has_truecolor()
@@ -55,5 +54,5 @@ function! colorscheme#has_solarized_palette()
 endfunction
 
 function! colorscheme#has_transparent_bg()
-  return !empty($TRANSPARENTTERM) && !exists('g:nyaovim_version')
+  return !empty($TRANSPARENTTERM) || exists('g:nyaovim_version')
 endfunction

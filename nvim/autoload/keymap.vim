@@ -1,6 +1,7 @@
 function! keymap#remap()
   call keymap#remap_vim()
   call keymap#remap_surround()
+  call keymap#remap_completion()
 endfunction
 
 " Remap abount standard operations
@@ -48,4 +49,11 @@ function! keymap#remap_surround()
   nmap <silent>R <Plug>(operator-surround-append)
   nmap <silent>E <Plug>(operator-surround-replace)
   nmap <silent>Q <Plug>(operator-surround-delete)
+endfunction
+
+function! keymap#remap_completion()
+  nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
+  nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+  inoremap <C-w> <C-p>
+  inoremap <C-s> <C-n>
 endfunction

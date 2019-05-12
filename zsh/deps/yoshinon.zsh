@@ -1,11 +1,6 @@
 alias vim='nvim'
 alias ocaml='rlwrap ocaml'
 
-# gnome-terminalなら多分透過してるので TRANSPARENTTERM をセットしておく
-if [[ ! -z ${GNOME_TERMINAL_SCREEN+x} ]]; then
-  export TRANSPARENTTERM='gnome-terminal'
-fi
-
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 source $HOME/.phpbrew/bashrc

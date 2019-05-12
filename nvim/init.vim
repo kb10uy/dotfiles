@@ -32,6 +32,7 @@ set inccommand=split
 set encoding=utf8
 set fileencodings=utf8
 set mouse=a
+set completeopt=menu
 set notitle
 set nofoldenable
 set ruler
@@ -39,4 +40,5 @@ set number
 
 call keymap#remap()
 call colorscheme#set_colorscheme()
+call variables#set_variables()
 

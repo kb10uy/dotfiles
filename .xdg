@@ -8,4 +8,5 @@ export GEM_HOME="$XDG_DATA_HOME/gem"
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export DATAGRIP_PROPERTIES="$HOME/dotfiles/jetbrains/datagrip.properties"
 export CLION_PROPERTIES="$HOME/dotfiles/jetbrains/clion.properties"
-export TRANSPARENTTERM="xfce"
+# TODO: 後で考える
+# export TRANSPARENTTERM="xfce"

@@ -23,6 +23,7 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export DefaultIMModule=fcitx
+export TRANSPARENTTERM=xfce
 source "$HOME/.xdg"
 source "$HOME/dotfiles/zsh/deps/yoshinon.env.zsh"
 
