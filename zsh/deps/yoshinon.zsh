@@ -1,6 +1,5 @@
 alias vim='nvim'
 alias ocaml='rlwrap ocaml'
-alias dpsql='PGPASSWORD=j3pWNtxAnI0fKWzt psql -h localhost'
 
 # gnome-terminalなら多分透過してるので TRANSPARENTTERM をセットしておく
 if [[ ! -z ${GNOME_TERMINAL_SCREEN+x} ]]; then
@@ -10,6 +9,12 @@ fi
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 source $HOME/.phpbrew/bashrc
+
+export GPG_TTY=$(tty)
+if [[ -n "$SSH_CONNECTION" ]]; then
+  export PINENTRY_USER_DATA="USE_CURSES=1"
+fi
+
 
 lost() {
   echo '失くした物は何ですか 出逢えます 必ずや'
