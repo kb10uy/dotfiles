@@ -44,6 +44,14 @@ function! keymap#remap_vim()
   inoremap <Down> <Nop>
   inoremap <Left> <Nop>
   inoremap <Right> <Nop>
+  cnoremap <C-w> <Up>
+  cnoremap <C-s> <Down>
+  cnoremap <C-a> <Left>
+  cnoremap <C-d> <Right>
+  tnoremap <C-w> <Up>
+  tnoremap <C-s> <Down>
+  tnoremap <C-a> <Left>
+  tnoremap <C-d> <Right>
 endfunction
 
 function! keymap#remap_shortcut()
