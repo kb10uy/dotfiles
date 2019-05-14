@@ -39,11 +39,10 @@ on_i = 1
 repo = "autozimu/LanguageClient-neovim"
 rev = "next"
 build = "bash install.sh"
-hook_add = '''
+hook_source = '''
 set hidden
-let g:LanguageClient_diagnosticsSignsMax = 2
 set signcolumn=yes
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+let g:LanguageClient_diagnosticsSignsMax = 2
 '''
 on_ft = ['rust', 'c', 'cpp']
 
@@ -51,9 +50,6 @@ on_ft = ['rust', 'c', 'cpp']
 repo = 'mattn/emmet-vim'
 on_i = 1
 on_ft = ['html']
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
 
 # Operators
 

@@ -12,5 +12,13 @@ repo = 'altercation/vim-colors-solarized'
 repo = 'lifepillar/vim-solarized8'
 
 [[plugins]]
+repo = 'junegunn/fzf'
+build = './install'
+merged = 0
+
+[[plugins]]
 repo = 'junegunn/fzf.vim'
-depends = ['~/.fzf']
+depends = 'fzf'
+hook_source = '''
+echo 'fzf loaded'
+'''

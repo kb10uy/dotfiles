@@ -1,7 +1,9 @@
 function! keymap#remap()
   call keymap#remap_vim()
+  call keymap#remap_shortcut()
   call keymap#remap_surround()
   call keymap#remap_completion()
+  call keymap#remap_fzf()
 endfunction
 
 " Remap abount standard operations
@@ -44,6 +46,12 @@ function! keymap#remap_vim()
   inoremap <Right> <Nop>
 endfunction
 
+function! keymap#remap_shortcut()
+  nnoremap <C-t> :tabe<Space>
+  nnoremap <C-d> gt
+  nnoremap <C-a> gT
+endfunction
+
 " Remap about plugins for surround
 function! keymap#remap_surround()
   nmap <silent>R <Plug>(operator-surround-append)
@@ -53,7 +61,13 @@ endfunction
 
 function! keymap#remap_completion()
   nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
+  nnoremap <C-I> :call LanguageClient#textDocument_formatting()<CR>
   nnoremap <F5> :call LanguageClient_contextMenu()<CR>
   inoremap <C-w> <C-p>
   inoremap <C-s> <C-n>
+endfunction
+
+function! keymap#remap_fzf()
+  nnoremap <C-f> :Files<CR>
+  nnoremap <C-g> :GFiles<CR>
 endfunction

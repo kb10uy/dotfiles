@@ -5,6 +5,7 @@ local CUSTOM_PATHS=(
   $HOME/.composer/vendor/bin
   $HOME/.config/composer/vendor/bin
   $LOCAL_ROOT/bin
+  $HOME/.fzf/bin
 )
 
 export PATH="${(pj:\x3a:)CUSTOM_PATHS}:$PATH"
