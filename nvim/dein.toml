@@ -11,3 +11,6 @@ repo = 'altercation/vim-colors-solarized'
 [[plugins]]
 repo = 'lifepillar/vim-solarized8'
 
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = ['~/.fzf']

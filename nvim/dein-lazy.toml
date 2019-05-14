@@ -1,8 +1,3 @@
-# Required
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-
 # Filetypes
 
 [[plugins]]
@@ -57,7 +52,11 @@ repo = 'mattn/emmet-vim'
 on_i = 1
 on_ft = ['html']
 
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
 # Operators
+
 [[plugins]]
 repo = 'kana/vim-operator-user'
 
