@@ -42,7 +42,7 @@ if hostname() =~ '^tus'
   let g:python3_host_prog = '/usr/bin/python3.6'
 endif
 
-call keymap#remap()
+autocmd VimEnter * call keymap#remap()
 call colorscheme#set_colorscheme()
 call variables#set_variables()
 
