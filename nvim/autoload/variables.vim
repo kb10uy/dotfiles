@@ -1,5 +1,7 @@
 function! variables#set_variables()
   call variables#set_lsp_servers()
+  call variables#set_vimtex()
+  call variables#set_tus()
 endfunction
 
 function! variables#set_lsp_servers()
@@ -11,4 +13,14 @@ function! variables#set_lsp_servers()
   let servers['cpp'] = ['ccls', '--log-file=/tmp/cc.log']
 
   let g:LanguageClient_serverCommands = servers
+endfunction
+
+function! variables#set_vimtex()
+  let g:vimtex_compiler_progname = 'nvr'
+endfunction
+
+function! variables#set_tus()
+  if hostname() =~ '^tus'
+    let g:python3_host_prog = '/usr/bin/python3.6'
+  endif
 endfunction

@@ -38,10 +38,6 @@ set nofoldenable
 set ruler
 set number
 
-if hostname() =~ '^tus'
-  let g:python3_host_prog = '/usr/bin/python3.6'
-endif
-
 autocmd VimEnter * call keymap#remap()
 call colorscheme#set_colorscheme()
 call variables#set_variables()

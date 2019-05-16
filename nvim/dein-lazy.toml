@@ -32,8 +32,7 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
 '''
-on_ft = ['rust', 'c', 'cpp']
-on_i = 1
+on_ft = ['rust', 'c', 'cpp', 'tex']
 
 [[plugins]]
 repo = "autozimu/LanguageClient-neovim"
@@ -50,6 +49,10 @@ on_ft = ['rust', 'c', 'cpp']
 repo = 'mattn/emmet-vim'
 on_i = 1
 on_ft = ['html']
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = ['tex']
 
 # Operators
 
