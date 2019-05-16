@@ -38,7 +38,6 @@ set nofoldenable
 set ruler
 set number
 
-autocmd VimEnter * call keymap#remap()
 call colorscheme#set_colorscheme()
 call variables#set_variables()
 

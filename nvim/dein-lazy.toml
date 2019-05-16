@@ -52,6 +52,9 @@ on_ft = ['html']
 
 [[plugins]]
 repo = 'lervag/vimtex'
+hook_source = '''
+let g:vimtex_mappings_enabled = 0
+'''
 on_ft = ['tex']
 
 # Operators
