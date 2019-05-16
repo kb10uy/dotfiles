@@ -17,6 +17,7 @@ endfunction
 
 function! variables#set_vimtex()
   let g:vimtex_compiler_progname = 'nvr'
+  let g:tex_flavor = 'latex'
 endfunction
 
 function! variables#set_tus()
