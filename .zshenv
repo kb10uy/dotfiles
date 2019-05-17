@@ -1,3 +1,9 @@
+# zmodload zsh/zprof && zprof
+
+if ! [[ -e "$HOME/dotfiles" ]]; then
+  echo "dotfiles repository not found!"
+fi
+
 source "$HOME/.xdg"
 
 if ! [[ -e "$XDG_CONFIG_HOME/zsh" ]]; then

@@ -1,4 +1,4 @@
-function! colorscheme#set_colorscheme()
+function! colorscheme#set_colorscheme() abort
   " TrueColor && Transparented
   " e.g. gnome-terminal
   " $COLORTERM (自動申告) と $TRANSPARENTTERM (手動申告) が
@@ -39,7 +39,7 @@ function! colorscheme#set_colorscheme()
   call colorscheme#override_colorscheme()
 endfunction
 
-function! colorscheme#override_colorscheme()
+function! colorscheme#override_colorscheme() abort
   if colorscheme#has_transparent_bg()
     highlight Normal ctermbg=NONE
     highlight Normal guibg=NONE
@@ -49,14 +49,14 @@ function! colorscheme#override_colorscheme()
   highlight PmenuSel ctermbg=13 gui=reverse,bold guibg=#2a4f54
 endfunction
 
-function! colorscheme#has_truecolor()
+function! colorscheme#has_truecolor() abort
   return $COLORTERM ==# 'truecolor' || $COLORTERM ==# '24bit'
 endfunction
 
-function! colorscheme#has_solarized_palette()
+function! colorscheme#has_solarized_palette() abort
   return !empty($SOLARIZEDTERM)
 endfunction
 
-function! colorscheme#has_transparent_bg()
+function! colorscheme#has_transparent_bg() abort
   return !empty($TRANSPARENTTERM) || exists('g:nyaovim_version')
 endfunction

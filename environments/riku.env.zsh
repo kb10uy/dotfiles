@@ -1,6 +1,7 @@
 export VISUAL="nvim"
 
 local CUSTOM_PATHS=(
+  /usr/local/texlive/2019/bin/x86_64-darwin
   $HOME/.cargo/bin
   $HOME/.composer/vendor/bin
   $HOME/.config/composer/vendor/bin
