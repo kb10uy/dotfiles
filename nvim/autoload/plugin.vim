@@ -12,5 +12,6 @@ function! plugin#setup_lsp() abort
 endfunction
 
 function! plugin#setup_completion() abort
+  echo 'set'
   let g:deoplete#enable_at_startup = 1
 endfunction
