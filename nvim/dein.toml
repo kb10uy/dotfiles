@@ -19,6 +19,3 @@ merged = 0
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
-hook_source = '''
-echo 'fzf loaded'
-'''

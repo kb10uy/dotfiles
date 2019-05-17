@@ -1,18 +1,54 @@
-function! variables#set_variables()
-  call variables#set_lsp_servers()
-  call variables#set_vimtex()
-  call variables#set_tus()
+let s:initpath = fnamemodify(expand('<sfile>'), ':p:h:h')
+
+function! variables#load_plugins() abort
+  let s:localpath = $HOME . '/.local/share/nvim/'
+  let s:deinpath = s:localpath . 'repos/github.com/Shougo/dein.vim'
+  let &runtimepath = &runtimepath . ',' . s:deinpath
+  if dein#load_state(s:localpath)
+    call dein#begin(s:localpath)
+    " for remote plugins
+    call dein#load_toml(s:initpath . '/dein.toml')
+    call dein#load_toml(s:initpath . '/dein-lazy.toml', {'lazy': 1})
+    " for local plugins
+    call dein#local(s:localpath . 'plugins/', {}, ['*'])
+    call dein#end()
+    call dein#save_state()
+  endif
 endfunction
 
-function! variables#set_lsp_servers()
-  let servers = {}
-  let rls_toolchain = empty($RLS_TOOLCHAIN) ? 'beta' : $RLS_TOOLCHAIN
+function! variables#set_flags() abort
+  " 日本語・エンコーディング
+  language ja_JP.UTF-8
+  set helplang=ja,en
+  set encoding=utf8
+  set fileencodings=utf8
 
-  let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
-  let servers['c'] = ['ccls', '--log-file=/tmp/cc.log']
-  let servers['cpp'] = ['ccls', '--log-file=/tmp/cc.log']
+  " 表示
+  filetype plugin indent on
+  syntax enable
+  set notitle
+  set nofoldenable
+  set ruler
+  set number
+  set completeopt=menu
+  set cmdheight=2
+  set laststatus=2
 
-  let g:LanguageClient_serverCommands = servers
+  " 挙動
+  set backspace=
+  set softtabstop=2
+  set shiftwidth=2
+  set tabstop=2
+  set expandtab
+  set wildmenu
+  set inccommand=split
+  set mouse=a
+  set hidden
+endfunction
+
+function! variables#set_variables()
+  call variables#set_vimtex()
+  call variables#set_tus()
 endfunction
 
 function! variables#set_vimtex()

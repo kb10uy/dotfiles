@@ -29,20 +29,14 @@ on_i = 1
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-let g:deoplete#enable_at_startup = 1
-'''
+hook_source = 'call plugin#setup_compeletion()'
 on_ft = ['rust', 'c', 'cpp', 'tex']
 
 [[plugins]]
 repo = "autozimu/LanguageClient-neovim"
 rev = "next"
 build = "bash install.sh"
-hook_source = '''
-set hidden
-set signcolumn=yes
-let g:LanguageClient_diagnosticsSignsMax = 2
-'''
+hook_source = 'call plugin#setup_lsp()'
 on_ft = ['rust', 'c', 'cpp']
 
 [[plugins]]
