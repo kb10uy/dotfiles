@@ -4,5 +4,8 @@ if [[ $TERM_PROGRAM == 'iTerm.app' ]]; then
   export TRANSPARENTTERM='iterm'
 fi
 
-# export NVM_DIR="$HOME/.nvm"
-# source /usr/local/opt/nvm/nvm.sh
+eval "$(opam env)"
+genell 'node npm' '
+  export NVM_DIR="$HOME/.nvm"
+  source /usr/local/opt/nvm/nvm.sh
+'
