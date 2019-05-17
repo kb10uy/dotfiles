@@ -15,6 +15,7 @@ if [ -f "$HOME/.zplug/init.zsh" ]; then
   zplug 'kb10uy/zsh-starter'
   zplug 'kb10uy/zsh-docker-utils'
   zplug 'kb10uy/zsh-theme-furry-umbrella'
+  zplug 'kb10uy/zsh-llutil'
 
   zplug load
 fi
