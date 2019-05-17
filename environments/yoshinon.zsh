@@ -1,8 +1,8 @@
 alias vim='nvim'
 alias ocaml='rlwrap ocaml'
 
-genell 'python python3 pip pip3 pyenv' 'eval "$(pyenv init -)"'
-genell 'ruby rbenv' 'eval "$(rbenv init -)"'
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
 genell 'php php-fpm phpbrew composer' 'source $HOME/.phpbrew/bashrc'
 
 export GPG_TTY=$(tty)
