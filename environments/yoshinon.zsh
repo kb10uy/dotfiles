@@ -1,9 +1,9 @@
 alias vim='nvim'
 alias ocaml='rlwrap ocaml'
 
-eval "$(pyenv init -)"
-eval "$(rbenv init -)"
-source $HOME/.phpbrew/bashrc
+genell 'python python3 pip pip3 pyenv' 'eval "$(pyenv init -)"'
+genell 'ruby rbenv' 'eval "$(rbenv init -)"'
+genell 'php php-fpm phpbrew composer' 'source $HOME/.phpbrew/bashrc'
 
 export GPG_TTY=$(tty)
 if [[ -n "$SSH_CONNECTION" ]]; then
