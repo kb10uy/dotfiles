@@ -18,7 +18,7 @@ warning() {
 
 check_command() {
   section "Checking $1..."
-  if ! command -v $1 > /dev/null; then
+  if ! command -v $1 > /dev/null 2>&1; then
     error "$1 not found!"
     exit 1
   fi
@@ -81,7 +81,7 @@ install_dotfiles() {
 install_plugin_managers() {
   section "Installing plugin managers..."
 
-  if ! command -v git > /dev/null 2&>1; then
+  if ! command -v git > /dev/null 2>&1; then
     error "Git not found! How do you install this repository!?"
     exit 2
   fi
