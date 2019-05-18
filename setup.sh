@@ -1,15 +1,15 @@
 #!/bin/sh
 
 section() {
-  echo -e "\e[1;2;37m:: $1\e[0m"
+  printf "\e[1;2;37m:: $1\e[0m\n"
 }
 
 process() {
-  echo -e "\e[34m==> $1\e[0m"
+  printf "\e[34m==> $1\e[0m\n"
 }
 
 error() {
-  echo -e "\e[1;31m$1\e[0m"
+  printf "\e[1;31m$1\e[0m\n"
 }
 
 check_command() {
