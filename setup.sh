@@ -115,7 +115,7 @@ run_setup() {
   check_command tmux
 
   check_command python3
-  check_command pip
+  check_command pip3
 
   install_config
   install_dotfiles
