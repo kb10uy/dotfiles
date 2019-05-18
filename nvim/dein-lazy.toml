@@ -27,7 +27,7 @@ repo = 'vim-jp/vimdoc-ja'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
-on_i = 1
+on_event = 'InsertEnter'
 
 # IDE features
 
@@ -44,13 +44,8 @@ hook_source = 'call plugin#setup_lsp()'
 on_ft = ['rust', 'c', 'cpp']
 
 [[plugins]]
-repo = "w0rp/ale"
-on_ft = ['tex']
-hook_source = 'call plugin#setup_ale()'
-
-[[plugins]]
 repo = 'mattn/emmet-vim'
-on_i = 1
+on_event = 'InsertEnter'
 on_ft = ['html']
 
 [[plugins]]
@@ -66,9 +61,9 @@ repo = 'kana/vim-operator-user'
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
 depends = ['vim-operator-user']
-on_i = 1
+on_event = 'InsertEnter'
 
 [[plugins]]
 repo = 'alpaca-tc/vim-endwise.git'
-on_i = 1
+on_event = 'InsertEnter'
 

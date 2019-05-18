@@ -6,13 +6,12 @@ CUSTOM_PATHS=(
   /usr/local/ssl/bin
   /usr/local/bin
   $HOME/.rbenv/bin
-#  $PYENV_ROOT/bin
   $HOME/.cargo/bin
   $HOME/.local/bin
   $HOME/.composer/vendor/bin
   $HOME/.config/composer/vendor/bin
-  $LOCAL_ROOT/bin
-  $HOME/.nodebrew/current/bin
+  $HOME/.local/share/node_modules/bin
+  $HOME/.luarocks/bin
   $HOME/.opam/system/bin
   /usr/local/texlive/2019/bin/x86_64-linux
 )

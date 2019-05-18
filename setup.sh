@@ -76,6 +76,7 @@ install_dotfiles() {
   make_symlink .xdg
   make_symlink .Xmodmap
   make_symlink .dmrc
+  make_symlink .npmrc
 }
 
 install_plugin_managers() {
@@ -94,6 +95,9 @@ install_plugin_managers() {
   mkdir -p ~/.local/share/nvim/repos/github.com/Shougo
   cd ~/.local/share/nvim/repos/github.com/Shougo
   git clone https://github.com/Shougo/dein.vim
+
+  process "npm (for node)"
+  mkdir -p ~/.local/share/node_modules
 }
 
 install_nvim_extra() {

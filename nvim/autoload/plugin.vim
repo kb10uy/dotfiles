@@ -9,6 +9,7 @@ function! plugin#setup_lsp() abort
   let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
   let servers['c'] = ['ccls', '--log-file=/tmp/cc.log']
   let servers['cpp'] = ['ccls', '--log-file=/tmp/cc.log']
+  " let servers['tex'] = ['digestif']
 
   let g:LanguageClient_serverCommands = servers
   let g:LanguageClient_diagnosticsSignsMax = 2
@@ -25,5 +26,6 @@ function! plugin#setup_tex() abort
   let g:vimtex_compiler_latexmk = {
         \   'background': 1,
         \   'continuous': 0,
+        \   'backend': 'nvim',
         \ }
 endfunction
