@@ -44,6 +44,7 @@ function! variables#set_flags() abort
   set inccommand=split
   set mouse=a
   set hidden
+  set sh=zsh
 endfunction
 
 function! variables#set_variables()
