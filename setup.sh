@@ -12,6 +12,10 @@ error() {
   printf "\e[1;31m$1\e[0m\n"
 }
 
+warning() {
+  printf "\e[1;33m$1\e[0m\n"
+}
+
 check_command() {
   section "Checking $1..."
   if ! command -v $1 > /dev/null; then
@@ -24,9 +28,11 @@ check_command() {
 make_symlink() {
   local target=$(pwd | sed -E "s#^$HOME#~#")
   process "~/dotfiles/$1 => $target/$1"
-  if ! ln -s "~/dotfiles/$1" ./ > /dev/null 2&>1; then
-    error "Failed to create symbolic link to $target/$1 !"
-    error "\e[2mIt may already exists. For reliability, you have to remove it manually."
+
+  if ! [[ -e ./$1 ]]; then
+    ln -s ~/dotfiles/$1 ./$1
+  else
+    warning "Already exists: $target/$1"
   fi
 }
 
@@ -34,7 +40,7 @@ check_repository() {
   # Check dotfiles repository
   section "Checking dotfiles repository..."
   local DOTFILESDIR=$(dirname $(realpath $0))
-  if ! [ $DOTFILESDIR = "$HOME/dotfiles" ]; then
+  if ! [[ $DOTFILESDIR = "$HOME/dotfiles" ]]; then
     error "Invalid dotfiles repository position: $DOTFILESDIR"
     error "\e[2mIt must be ~/dotfiles !"
     exit 1
