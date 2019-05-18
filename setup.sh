@@ -102,10 +102,10 @@ install_nvim_extra() {
   cd
 
   process "pynvim (required for python scripts)"
-  pip install --user pynvim
+  pip3 install --user pynvim
 
   process "neovim-remote (required for LSP connection)"
-  pip install --user neovim-remote
+  pip3 install --user neovim-remote
 }
 
 run_setup() {
