@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 section() {
   printf "\e[1;2;37m:: $1\e[0m\n"
