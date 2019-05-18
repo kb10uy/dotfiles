@@ -25,7 +25,7 @@ function! plugin#setup_tex() abort
   let g:vimtex_quickfix_open_on_warning = 0
   let g:vimtex_compiler_latexmk = {
         \   'background': 1,
-        \   'continuous': 0,
+        \   'continuous': 1,
         \   'backend': 'nvim',
         \ }
 endfunction
