@@ -23,6 +23,9 @@ function! s:remap_vim()
   noremap f P
   noremap F p
 
+  " Whole operation
+  noremap <M-I> gg=G2<C-O>
+
   " Undo, Redo
   noremap z u
   noremap Z <C-r>
