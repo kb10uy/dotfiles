@@ -96,10 +96,10 @@ install_nvim_extra() {
   cd
 
   process "pynvim (required for python scripts)"
-  pip3 install --user pynvim
+  pip install --user pynvim
 
   process "neovim-remote (required for LSP connection)"
-  pip3 install --user neovim-remote
+  pip install --user neovim-remote
 }
 
 run_setup() {
@@ -109,7 +109,7 @@ run_setup() {
   check_command tmux
 
   check_command python3
-  check_command pip3
+  check_command pip
 
   install_config
   install_dotfiles
