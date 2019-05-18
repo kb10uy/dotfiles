@@ -16,6 +16,10 @@ on_ft = ['haskell']
 repo = 'rust-lang/rust.vim'
 on_ft = ['rust']
 
+[[plugins]]
+repo = 'let-def/ocp-indent-vim'
+on_ft = ['ocaml']
+
 # General
 
 [[plugins]]

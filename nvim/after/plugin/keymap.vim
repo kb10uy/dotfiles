@@ -19,7 +19,9 @@ function! s:remap_vim()
   nnoremap ee cc<Esc>
   nnoremap qq "_dd
   nnoremap rr yy
-  noremap f p
+  vnoremap e d
+  noremap f P
+  noremap F p
 
   " Undo, Redo
   noremap z u

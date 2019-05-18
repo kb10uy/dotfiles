@@ -6,7 +6,7 @@ CUSTOM_PATHS=(
   /usr/local/ssl/bin
   /usr/local/bin
   $HOME/.rbenv/bin
-  $PYENV_ROOT/bin
+#  $PYENV_ROOT/bin
   $HOME/.cargo/bin
   $HOME/.local/bin
   $HOME/.composer/vendor/bin

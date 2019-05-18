@@ -48,16 +48,19 @@ endfunction
 
 function! variables#set_variables()
   call variables#set_vimtex()
-  call variables#set_tus()
+  call variables#set_python()
 endfunction
 
-function! variables#set_vimtex()
+function! variables#set_vimtex() abort
   let g:vimtex_compiler_progname = 'nvr'
   let g:tex_flavor = 'latex'
 endfunction
 
-function! variables#set_tus()
+function! variables#set_python() abort
+  let g:python_host_prog = ''
   if hostname() =~ '^tus'
     let g:python3_host_prog = '/usr/bin/python3.6'
+  else
+    let g:python3_host_prog = '/usr/bin/python3'
   endif
 endfunction
