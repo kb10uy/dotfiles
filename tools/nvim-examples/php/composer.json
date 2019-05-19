@@ -1,0 +1,10 @@
+{
+    "name": "kb10uy/php",
+    "authors": [
+        {
+            "name": "Yuu Kobayashi",
+            "email": "kb10uy@kb10uy.org"
+        }
+    ],
+    "require": {}
+}

@@ -1,3 +1,8 @@
 /zsh/.zcompdump
 /zsh/.zsh_history
 /nvim/.netrwhist
+
+.ccls-cache
+vendor
+node_modules
+target

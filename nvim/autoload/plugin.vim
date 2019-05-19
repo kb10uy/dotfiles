@@ -1,6 +1,6 @@
 function! plugin#setup_lsp() abort
   let rls_toolchain = empty($RLS_TOOLCHAIN) ? 'beta' : $RLS_TOOLCHAIN
-  let pls_path = $HOME . '.config/composer/vendor/bin/php-language-server.php'
+  let pls_path = $HOME . '/.config/composer/vendor/bin/php-language-server.php'
 
   let servers = {}
   let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
