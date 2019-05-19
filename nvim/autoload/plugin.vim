@@ -9,10 +9,12 @@ function! plugin#setup_lsp() abort
   let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
   let servers['c'] = ['ccls', '--log-file=/tmp/cc.log']
   let servers['cpp'] = ['ccls', '--log-file=/tmp/cc.log']
+  let servers['typescript'] = ['javascript-typescript-stdio']
   " let servers['tex'] = ['digestif']
 
   let g:LanguageClient_serverCommands = servers
   let g:LanguageClient_diagnosticsSignsMax = 2
+  let g:LanguageClient_signatureHelpOnCompleteDone = 1
   set signcolumn=yes
 endfunction
 
