@@ -62,6 +62,6 @@ function! variables#set_python() abort
   if hostname() =~ '^tus'
     let g:python3_host_prog = '/usr/bin/python3.6'
   else
-    let g:python3_host_prog = '/usr/bin/python3'
+    let g:python3_host_prog = trim(system('which python3'))
   endif
 endfunction
