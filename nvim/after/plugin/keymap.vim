@@ -49,6 +49,7 @@ function! s:remap_vim()
   tnoremap <C-s> <Down>
   tnoremap <C-a> <Left>
   tnoremap <C-d> <Right>
+  tnoremap <M-Esc> <C-\><C-n>
 endfunction
 
 function! s:remap_shortcut()

@@ -24,8 +24,6 @@ function! variables#set_flags() abort
   set fileencodings=utf8
 
   " 表示
-  filetype plugin indent on
-  syntax enable
   set notitle
   set nofoldenable
   set ruler

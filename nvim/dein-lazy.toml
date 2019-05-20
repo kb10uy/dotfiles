@@ -45,13 +45,16 @@ on_ft = ['rust', 'c', 'cpp', 'typescript', 'php']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_event = 'InsertEnter'
-on_ft = ['html', 'php']
+on_ft = ['html']
 
 [[plugins]]
 repo = 'lervag/vimtex'
 hook_source = 'call plugin#setup_tex()'
 on_ft = ['tex']
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_event = 'CursorHold'
 
 # Operators
 
