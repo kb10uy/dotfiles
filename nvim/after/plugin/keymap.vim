@@ -25,6 +25,10 @@ function! s:remap_vim()
 
   " Whole operation
   noremap <M-I> gg=G2<C-O>
+  tnoremap <M-Esc> <C-\><C-n>
+  noremap <C-q> <Esc>
+  inoremap <C-q> <Esc>
+  tnoremap <C-q> <C-\><C-n>
 
   " Undo, Redo
   noremap z u
@@ -49,7 +53,6 @@ function! s:remap_vim()
   tnoremap <C-s> <Down>
   tnoremap <C-a> <Left>
   tnoremap <C-d> <Right>
-  tnoremap <M-Esc> <C-\><C-n>
 endfunction
 
 function! s:remap_shortcut()
