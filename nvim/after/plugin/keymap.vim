@@ -76,6 +76,16 @@ endfunction
 function! s:remap_fzf()
   nnoremap <C-f> :Files<CR>
   nnoremap <C-g> :GFiles<CR>
+  command! -bang -nargs=* Rg
+        \ call fzf#vim#grep(
+        \   'rg --line-number --no-heading ' . shellescape(<q-args>),
+        \   0,
+        \   fzf#vim#with_preview(
+        \     { 'options': '--exact --delimiter : --nth 3..' },
+        \     'right:50%:wrap'
+        \   )
+        \ )
+  nnoremap <C-r> :Rg<CR>
 endfunction
 
 call s:remap_vim()
