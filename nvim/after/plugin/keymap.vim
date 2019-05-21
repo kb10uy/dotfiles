@@ -22,6 +22,8 @@ function! s:remap_vim()
   vnoremap e d
   noremap f P
   noremap F p
+  nnoremap <C-w> <C-a>
+  nnoremap <C-s> <C-x>
 
   " Whole operation
   noremap <M-I> gg=G2<C-O>

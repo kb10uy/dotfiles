@@ -1,12 +1,10 @@
 function! colorscheme#set_colorscheme() abort
   set background=dark
-  if colorscheme#has_truecolor()
-    if $TERM ==# 'screen-256colors'
-      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    endif
-    set termguicolors
+  if $TERM ==# 'screen-256colors'
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   endif
+  set termguicolors
   colorscheme solarized8
   call colorscheme#override_colorscheme()
 endfunction
