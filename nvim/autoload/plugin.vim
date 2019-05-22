@@ -1,4 +1,8 @@
 function! plugin#setup_lsp() abort
+  if !empty($NVIM_DISABLE_LSP)
+    return
+  endif
+
   let rls_toolchain = empty($RLS_TOOLCHAIN) ? 'beta' : $RLS_TOOLCHAIN
   let pls_path = $HOME . '/.config/composer/vendor/bin/php-language-server.php'
 
@@ -8,7 +12,7 @@ function! plugin#setup_lsp() abort
   let servers['cpp'] = ['ccls', '--log-file=/tmp/cc.log']
   let servers['typescript'] = ['javascript-typescript-stdio']
   let servers['php'] = ['php', pls_path]
-  let servers['haskell'] = ['hie-wrapper']
+  let servers['haskell'] = ['hie-wrapper', '--lsp']
   " let servers['tex'] = ['digestif']
 
   let g:LanguageClient_serverCommands = servers
