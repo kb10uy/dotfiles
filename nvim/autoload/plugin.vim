@@ -13,7 +13,8 @@ function! plugin#setup_lsp() abort
 
   let g:LanguageClient_serverCommands = servers
   let g:LanguageClient_diagnosticsSignsMax = 2
-  let g:LanguageClient_signatureHelpOnCompleteDone = 1
+  " これ呼ぶと破滅するので NG
+  " let g:LanguageClient_signatureHelpOnCompleteDone = 1
   set signcolumn=yes
 endfunction
 
