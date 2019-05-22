@@ -2,6 +2,7 @@
 
 export VISUAL='nvim'
 export PATH="$HOME/.local/bin:$PATH"
+export NVIM_DISABLE_LSP=1
 
 shopt -s autocd
 alias ls='ls --color=auto'
