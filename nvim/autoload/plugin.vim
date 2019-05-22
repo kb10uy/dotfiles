@@ -8,6 +8,7 @@ function! plugin#setup_lsp() abort
   let servers['cpp'] = ['ccls', '--log-file=/tmp/cc.log']
   let servers['typescript'] = ['javascript-typescript-stdio']
   let servers['php'] = ['php', pls_path]
+  let servers['haskell'] = ['hie-wrapper']
   " let servers['tex'] = ['digestif']
 
   let g:LanguageClient_serverCommands = servers
