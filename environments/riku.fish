@@ -12,3 +12,5 @@ set -U fish_user_paths \
   /usr/local/bin \
   /usr/bin \
   /bin
+
+eval (opam env)

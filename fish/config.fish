@@ -1,5 +1,7 @@
+# Clear greeting message
 set fish_greeting
 
+# Set prompt
 function fish_prompt
   set -l stat $status
 
@@ -25,4 +27,13 @@ function fish_prompt
   # >
   set_color normal
   printf '\n$ '
+end
+
+# Load dependency file
+set -l dependency_file "$HOME/dotfiles/environments/"(hostname)".fish"
+if [ -e "$dependency_file" ]
+  source $dependency_file
+else
+  set_color -ro -b white red
+  echo "Dependency file for "(hostname)" was not found!"
 end
