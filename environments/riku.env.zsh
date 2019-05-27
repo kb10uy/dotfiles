@@ -6,6 +6,7 @@ local CUSTOM_PATHS=(
   $HOME/.composer/vendor/bin
   $HOME/.config/composer/vendor/bin
   $LOCAL_ROOT/bin
+  $LOCAL_ROOT/share/node_modules/bin
   $HOME/.fzf/bin
 )
 
