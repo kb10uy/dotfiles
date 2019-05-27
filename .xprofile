@@ -25,7 +25,6 @@ export XMODIFIERS=@im=fcitx
 export DefaultIMModule=fcitx
 export TRANSPARENTTERM=xfce
 source "$HOME/.xdg"
-source "$HOME/dotfiles/environments/yoshinon.env.zsh"
 
 rm $HOME/.xsession-errors
 ln -s /dev/null $HOME/.xsession-errors
