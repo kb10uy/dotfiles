@@ -1,6 +1,7 @@
 /zsh/.zcompdump
 /zsh/.zsh_history
 /nvim/.netrwhist
+/fish/functions/fisher.fish
 
 .ccls-cache
 vendor
