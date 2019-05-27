@@ -55,6 +55,7 @@ install_config() {
   mkdir -p ~/.config
   cd ~/.config
   make_symlink zsh
+  make_symlink fish
   make_symlink nano
   make_symlink nvim
   make_symlink i3
