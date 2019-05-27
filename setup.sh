@@ -93,12 +93,10 @@ install_plugin_managers() {
   git clone --depth 1 https://github.com/zplug/zplug .zplug
 
   process "fisher (for fish)"
-  mkdir -p ~/.config/fish/functions
-  cd ~/.config/fish/functions
+  mkdir -p ~/.local/share/fish/fisher/functions
+  cd ~/.local/share/fish/fisher/functions
   curl https://git.io/fisher -sLo fisher.fish
-
-  mkdir -p ~/.local/share/fish/fisher
-  cd ~/.local/share/fish/fisher
+  cd ../
   if ! [[ -e ./fishfile ]]; then
     ln -s ~/dotfiles/fish/fishfile fishfile
   fi

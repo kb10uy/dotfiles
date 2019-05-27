@@ -1,5 +1,6 @@
 set -x EDITOR 'nvim'
 set -x VISUAL 'nvim'
+set -x TRANSPARENTTERM 'iTerm2.app'
 
 set -U fish_user_paths \
   /usr/local/texlive/2019/bin/x86_64-darwin \
