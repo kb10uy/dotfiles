@@ -10,6 +10,10 @@ function! s:remap_vim()
   noremap <nowait><lt> <Home>
   noremap <nowait>> <End>
   noremap ?? <lt><lt>
+  ounmap a
+  ounmap s
+  ounmap w
+  ounmap d
 
   " Delete, Cut, Yank, Paste
   noremap x "_x
