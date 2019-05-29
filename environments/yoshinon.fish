@@ -1,7 +1,7 @@
 set -x EDITOR 'nvim'
 set -x VISUAL 'nvim'
 
-set -U fish_user_paths \
+set -x PATH \
   $HOME/.cargo/bin \
   $HOME/.opam/system/bin \
   $HOME/.local/bin \
