@@ -14,3 +14,7 @@ else
   set_color -ro -b white red
   echo "Dependency file for "(hostname)" was not found!"
 end
+
+if [ -e "$HOME/.dir_colors" ]
+  eval (dircolors -c $HOME/.dir_colors)
+end
