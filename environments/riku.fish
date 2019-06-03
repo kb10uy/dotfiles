@@ -7,6 +7,7 @@ set -x PATH \
   $HOME/.cargo/bin \
   $HOME/.composer/vendor/bin \
   $HOME/.config/composer/vendor/bin \
+  $HOME/Library/Python/3.7/bin \
   $LOCAL_ROOT/bin \
   $LOCAL_ROOT/share/node_modules/bin \
   $HOME/.fzf/bin \
