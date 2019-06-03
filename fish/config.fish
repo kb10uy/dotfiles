@@ -6,6 +6,8 @@ for file in $fisher_path/conf.d/*.fish
     builtin source $file 2> /dev/null
 end
 
+set FISH_PLATFORM (uname)
+
 # Load dependency file
 set -l dependency_file "$HOME/dotfiles/environments/"(hostname)".fish"
 if [ -e "$dependency_file" ]
@@ -16,5 +18,10 @@ else
 end
 
 if [ -e "$HOME/.dir_colors" ]
-  eval (dircolors -c $HOME/.dir_colors)
+  switch $FISH_PLATFORM
+    case Linux
+      eval (dircolors -c $HOME/.dir_colors)
+    case Darwin
+      eval (gdircolors -c $HOME/.dir_colors)
+  end
 end

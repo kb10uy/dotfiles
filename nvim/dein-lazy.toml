@@ -42,14 +42,14 @@ on_event = 'InsertEnter'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_source = 'call plugin#setup_completion()'
-on_ft = ['rust', 'c', 'cpp', 'tex', 'ocaml', 'javascript', 'typescript', 'php', 'haskell']
+on_ft = ['rust', 'c', 'cpp', 'tex', 'ocaml', 'javascript', 'typescript', 'php', 'haskell', 'python']
 
 [[plugins]]
 repo = "autozimu/LanguageClient-neovim"
 rev = "next"
 build = "bash install.sh"
 hook_source = 'call plugin#setup_lsp()'
-on_ft = ['rust', 'c', 'cpp', 'javascript', 'typescript', 'php', 'haskell']
+on_ft = ['rust', 'c', 'cpp', 'javascript', 'typescript', 'php', 'haskell', 'python']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
