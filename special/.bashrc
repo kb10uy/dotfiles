@@ -2,7 +2,9 @@
 
 export VISUAL='nvim'
 export PATH="$HOME/.local/bin:$PATH"
+export GRADLE_HOME="$HOME/.local"
 export NVIM_DISABLE_LSP=1
+export TRANSPARENTTERM='mate'
 
 shopt -s autocd
 alias ls='ls --color=auto'
