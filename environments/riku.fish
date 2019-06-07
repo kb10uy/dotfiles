@@ -16,3 +16,4 @@ set -x PATH \
   /bin
 
 eval (opam env)
+source (nodenv init - | psub)
