@@ -12,4 +12,4 @@ Interactive::sayCheck('Checking Interactive module');
 Interactive::sayOk();
 
 my $seled = Interactive::showMenu('おっぱい', ('まんこ', 'まんこ', 'ちんこ'));
-print $seled . "\n";
+Interactive::dieWithError('abc');

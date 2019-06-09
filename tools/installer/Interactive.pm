@@ -3,12 +3,22 @@ package Interactive;
 use Scalar::Util qw(looks_like_number);
 
 our $esError = '31';
+our $esFatal = '1;7;31;47';
 our $esSuccess = '32';
 our $esHeader = '34';
+our $esHighlight = '37';
 
 sub printEscape {
   my ($command, $text) = @_;
   print "\e[" . $command . 'm' . $text . "\e[m";
+}
+
+sub printBanner {
+  printEscape($esHighlight, '================================================================================');
+  printEscape($esHighlight, '               ╺┳┓┏━┓╺┳╸┏━╸╻╻  ┏━╸┏━┓   ╻┏┓╻┏━┓╺┳╸┏━┓╻  ╻  ┏━╸┏━┓               ');
+  printEscape($esHighlight, '                ┃┃┃ ┃ ┃ ┣╸ ┃┃  ┣╸ ┗━┓   ┃┃┗┫┗━┓ ┃ ┣━┫┃  ┃  ┣╸ ┣┳┛               ');
+  printEscape($esHighlight, '               ╺┻┛┗━┛ ╹ ╹  ╹┗━╸┗━╸┗━┛   ╹╹ ╹┗━┛ ╹ ╹ ╹┗━╸┗━╸┗━╸╹┗╸               ');
+  printEscape($esHighlight, '================================================================================');
 }
 
 # ==> Message...
@@ -28,6 +38,7 @@ sub sayNg {
   printEscape($esError, "[NG]\n");
 }
 
+# メニューを表示して選択させる。
 sub showMenu {
   my ($title, @selections) = @_;
   printEscape($esHeader, "# $title\n");
@@ -44,6 +55,13 @@ sub showMenu {
     if ($index >= @selections) { next; }
     return $index;
   }
+}
+
+# 死ぬ
+sub dieWithError {
+  my ($message) = @_;
+  printEscape($esFatal, $message);
+  exit 1;
 }
 
 1;

@@ -24,8 +24,8 @@ function! s:remap_vim()
   nnoremap qq "_dd
   nnoremap rr yy
   vnoremap e d
-  noremap f P
-  noremap F p
+  noremap f "_dP
+  noremap F "_dp
   nnoremap <C-w> <C-a>
   nnoremap <C-s> <C-x>
 
