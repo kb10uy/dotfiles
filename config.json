@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Fish",
+    "description": "Fish setup",
+    "submenu": [
+      {
+        "name": "Link config",
+        "description": "Link configuration directory",
+        "actions": [
+          { "type": "mkdir", "path": "~/.config/" },
+          { "type": "link", "from": "./fish", "to": "~/.config/fish" }
+        ]
+      },
+      {
+        "name": "Install fisher",
+        "description": "Install fisher plugin manager",
+        "actions": [
+          { "type": "github", "repository": "foo/bar", "target": "~/.local/share/fisher" }
+        ]
+      }
+    ]
+  }
+]
