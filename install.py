@@ -2,22 +2,12 @@
 
 import json
 from os import path, getenv
-from installer import console, config
+from installer import console, config, wizard
 
 base_dir = path.abspath(path.dirname(__file__))
+config_list = config.Configuration()
+config_list.load(path.join(base_dir, 'config.json'))
 
-def check_repository():
-    console.waiting('Checking repository location')
-    expected = path.abspath(path.join(getenv('HOME'), 'dotfiles'))
-    if base_dir == expected:
-        console.ok()
-    else:
-        console.ng()
-        console.fatal('Invalid repository location: {}'.format(base_dir))
-        console.fatal('Place dotfiles repository as {}'.format(expected), True)
+w = wizard.Wizard(base_dir, config_list)
+w.run()
 
-
-# -----------------------------------------------------------------------------
-
-console.banner()
-check_repository()

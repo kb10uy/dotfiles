@@ -14,6 +14,6 @@ class Configuration:
 
 
 class MenuEntry:
-    def __init__(self, obj):
-        self.name = obj.name
-        self.description = obj.description
+    def __init__(self, obj: dict):
+        self.name = obj.get('name')
+        self.description = obj.get('description')
