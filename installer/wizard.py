@@ -15,6 +15,7 @@ class Wizard:
         """
         self.config = config
         self.base_dir = base
+        self.__menu_stack = []
 
     def run(self):
         """
@@ -22,11 +23,12 @@ class Wizard:
         """
         console.banner()
         self.__check_repository()
-        self.__check_command('git')
-        self.__check_command('python3')
-        self.__check_command('pip3')
-        self.__check_command('fish')
-        self.__check_command('nvim')
+        for cmd in self.config.prerequisites:
+            self.__check_command(cmd)
+
+        # Execute menu
+        self.__menu_stack.append(self.config.entries)
+        self.__exec_menu('Select an entry by number.')
 
     def __check_repository(self):
         """
@@ -57,5 +59,20 @@ class Wizard:
             console.ok()
         else:
             console.ng()
-            console.fatal('{} was not found. Install it via any means.'.format(cmd))
+            console.fatal('{} was not found. Install it by any means.'.format(cmd))
+
+    def __exec_menu(self, title: str):
+        """
+        メニューを表示する。
+
+        Parameters
+        ----------------
+        title: str
+            メニュータイトル
+        """
+
+        level = len(self.__menu_stack)
+        console.highlight("{} {}".format('#' * level, title))
+        for i, me in enumerate(self.__menu_stack[-1]):
+            console.highlight("{} {} : {}".format('#' * level, i, me.name))
 

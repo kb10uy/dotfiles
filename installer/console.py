@@ -38,6 +38,13 @@ def fatal(msg: str, quit_now = False):
     print('\x1b[1;7;31;47m{}\x1b[m'.format(msg))
     if quit_now: sys.exit(1)
 
+def highlight(msg: str):
+    """
+    ハイライトされた文字列
+    (白)
+    """
+    print("\x1b[37m{}\x1b[m".format(msg))
+
 def ok():
     """
     [OK]
@@ -51,4 +58,3 @@ def ng():
     (赤)
     """
     print('\x1b[31m[NG]\x1b[m')
-
