@@ -53,7 +53,7 @@ on_ft = ['rust', 'c', 'cpp', 'javascript', 'typescript', 'php', 'haskell', 'pyth
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = ['html']
+on_ft = ['html', 'php']
 
 [[plugins]]
 repo = 'lervag/vimtex'
