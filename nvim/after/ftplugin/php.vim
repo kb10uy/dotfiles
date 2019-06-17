@@ -1,1 +1,1 @@
-imap <C-e> <Plug><C-y>,
+imap <C-e> <C-y>,
