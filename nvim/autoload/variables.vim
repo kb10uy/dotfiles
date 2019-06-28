@@ -42,6 +42,10 @@ function! variables#set_flags() abort
   set inccommand=split
   set mouse=a
   set hidden
+
+  if exists('&pumblend')
+    set pumblend=20
+  endif
 endfunction
 
 function! variables#set_variables()
