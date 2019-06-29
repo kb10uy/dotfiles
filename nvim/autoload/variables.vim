@@ -44,7 +44,7 @@ function! variables#set_flags() abort
   set hidden
 
   if exists('&pumblend')
-    set pumblend=20
+    " set pumblend=20
   endif
 endfunction
 
