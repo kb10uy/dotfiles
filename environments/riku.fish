@@ -10,8 +10,8 @@ set -x PATH \
   $HOME/.composer/vendor/bin \
   $HOME/.config/composer/vendor/bin \
   $HOME/Library/Python/3.7/bin \
-  $LOCAL_ROOT/bin \
-  $LOCAL_ROOT/share/node_modules/bin \
+  $HOME/.local/bin \
+  $HOME/.local/share/node_modules/bin \
   $HOME/.fzf/bin \
   /usr/local/bin \
   /usr/bin \
