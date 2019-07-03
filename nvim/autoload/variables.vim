@@ -31,6 +31,7 @@ function! variables#set_flags() abort
   set completeopt=menu
   set cmdheight=2
   set laststatus=2
+  set signcolumn=yes
 
   " 挙動
   set backspace=

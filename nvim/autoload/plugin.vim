@@ -21,7 +21,6 @@ function! plugin#setup_lsp() abort
   let g:LanguageClient_diagnosticsSignsMax = 2
   " これ呼ぶと破滅するので NG
   " let g:LanguageClient_signatureHelpOnCompleteDone = 1
-  set signcolumn=yes
 endfunction
 
 function! plugin#setup_completion() abort
