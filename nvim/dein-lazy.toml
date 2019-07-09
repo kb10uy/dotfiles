@@ -28,6 +28,14 @@ on_ft = ['rust']
 repo = 'let-def/ocp-indent-vim'
 on_ft = ['ocaml']
 
+[[plugins]]
+repo = 'StanAngeloff/php.vim'
+on_ft = ['php']
+
+[[plugins]]
+repo = 'jwalton512/vim-blade'
+on_ft = ['blade']
+
 # General
 
 [[plugins]]
