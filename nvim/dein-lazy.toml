@@ -36,14 +36,6 @@ on_ft = ['php']
 repo = 'jwalton512/vim-blade'
 on_ft = ['blade']
 
-# General
-
-[[plugins]]
-repo = 'vim-jp/vimdoc-ja'
-
-[[plugins]]
-repo = 'editorconfig/editorconfig-vim'
-on_event = 'InsertEnter'
 
 # IDE features
 
