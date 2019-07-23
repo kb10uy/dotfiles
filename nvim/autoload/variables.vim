@@ -62,7 +62,8 @@ endfunction
 function! variables#set_python() abort
   let g:python_host_prog = ''
   if !empty($PIPENV_ACTIVE)
-    let g:python3_host_prog = trim(system('which python'))
+    " let g:python3_host_prog = trim(system('which python'))
+    " do nothing
   elseif !empty($PYTHON3_PATH)
     let g:python3_host_prog = $PYTHON3_PATH
   else
