@@ -61,10 +61,8 @@ endfunction
 
 function! variables#set_python() abort
   let g:python_host_prog = ''
-  if !empty($PYTHON3_PATH)
+  if !empty($PYTHON3_PATH) && empty($PIPENV_ACTIVE)
     let g:python3_host_prog = $PYTHON3_PATH
-  elseif hostname() =~'^tus'
-    let g:python3_host_prog = '/usr/bin/python3.6'
   else
     let g:python3_host_prog = trim(system('which python3'))
   endif
