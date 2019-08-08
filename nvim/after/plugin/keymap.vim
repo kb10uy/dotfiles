@@ -7,6 +7,8 @@ function! s:remap_vim()
   noremap <nowait>d l
   noremap <nowait>W <C-u>
   noremap <nowait>S <C-d>
+  noremap <nowait>A I
+  noremap <nowait>D A
   noremap <nowait>, b
   noremap <nowait>. w
   noremap <nowait><lt> <Home>
