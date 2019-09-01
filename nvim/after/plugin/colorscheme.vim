@@ -7,6 +7,7 @@ function! colorscheme#set_colorscheme() abort
   set termguicolors
   colorscheme solarized8
   call colorscheme#override_colorscheme()
+  autocmd FileType vue syntax sync fromstart
 endfunction
 
 function! colorscheme#override_colorscheme() abort

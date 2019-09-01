@@ -19,7 +19,8 @@ function! plugin#setup_lsp() abort
 
   let g:LanguageClient_serverCommands = servers
   let g:LanguageClient_diagnosticsSignsMax = 2
-  " これ呼ぶと破滅するので NG
+  " これら呼ぶと破滅するので NG
+  " let g:LanguageClient_completionPreferTextEdit = 1
   " let g:LanguageClient_signatureHelpOnCompleteDone = 1
 endfunction
 
