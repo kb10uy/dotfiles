@@ -25,7 +25,8 @@ function! plugin#setup_lsp() abort
 endfunction
 
 function! plugin#setup_completion() abort
-  let g:deoplete#enable_at_startup = 1
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+  set completeopt=noinsert,menuone,noselect
 endfunction
 
 function! plugin#setup_tex() abort

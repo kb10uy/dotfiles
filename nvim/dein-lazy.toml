@@ -43,7 +43,11 @@ on_ft = ['vue']
 # IDE features
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'ncm2/ncm2'
+depends = ['nvim-yarp']
 hook_source = 'call plugin#setup_completion()'
 # TODO: cpp を戻したい
 on_ft = ['rust', 'c', 'tex', 'ocaml', 'javascript', 'typescript', 'php', 'haskell', 'python']
