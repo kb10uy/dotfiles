@@ -103,7 +103,7 @@ repo = 'rhysd/vim-operator-surround'
 depends = ['vim-operator-user']
 on_event = 'InsertEnter'
 
-[[plugins]]
-repo = 'alpaca-tc/vim-endwise.git'
-on_event = 'InsertEnter'
+# [[plugins]]
+# repo = 'alpaca-tc/vim-endwise.git'
+# on_event = 'InsertEnter'
 

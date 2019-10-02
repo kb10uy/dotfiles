@@ -25,9 +25,9 @@ function! kb10uy#plugin#setup_lsp() abort
 endfunction
 
 function! kb10uy#plugin#setup_completion() abort
+  inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
   autocmd BufEnter * call ncm2#enable_for_buffer()
   set completeopt=noinsert,menuone,noselect
-  inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 endfunction
 
 function! kb10uy#plugin#setup_tex() abort
