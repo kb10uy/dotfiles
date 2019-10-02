@@ -27,6 +27,7 @@ endfunction
 function! plugin#setup_completion() abort
   autocmd BufEnter * call ncm2#enable_for_buffer()
   set completeopt=noinsert,menuone,noselect
+  inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 endfunction
 
 function! plugin#setup_tex() abort
