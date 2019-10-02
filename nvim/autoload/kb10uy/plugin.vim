@@ -1,4 +1,4 @@
-function! plugin#setup_lsp() abort
+function! kb10uy#plugin#setup_lsp() abort
   if !empty($NVIM_DISABLE_LSP)
     return
   endif
@@ -24,13 +24,13 @@ function! plugin#setup_lsp() abort
   " let g:LanguageClient_signatureHelpOnCompleteDone = 1
 endfunction
 
-function! plugin#setup_completion() abort
+function! kb10uy#plugin#setup_completion() abort
   autocmd BufEnter * call ncm2#enable_for_buffer()
   set completeopt=noinsert,menuone,noselect
   inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 endfunction
 
-function! plugin#setup_tex() abort
+function! kb10uy#plugin#setup_tex() abort
   let g:vimtex_mappings_enabled = 0
   let g:vimtex_quickfix_open_on_warning = 0
   let g:vimtex_compiler_latexmk = {

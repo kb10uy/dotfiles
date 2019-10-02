@@ -1,6 +1,6 @@
-let s:initpath = fnamemodify(expand('<sfile>'), ':p:h:h')
+let s:initpath = fnamemodify(expand('<sfile>'), ':p:h:h:h')
 
-function! variables#load_plugins() abort
+function! kb10uy#variables#load_plugins() abort
   let s:localpath = $HOME . '/.local/share/nvim/'
   let s:deinpath = s:localpath . 'repos/github.com/Shougo/dein.vim'
   let &runtimepath = &runtimepath . ',' . s:deinpath
@@ -16,7 +16,7 @@ function! variables#load_plugins() abort
   endif
 endfunction
 
-function! variables#set_flags() abort
+function! kb10uy#variables#set_flags() abort
   " 日本語・エンコーディング
   language ja_JP.UTF-8
   set helplang=ja,en
@@ -49,17 +49,17 @@ function! variables#set_flags() abort
   endif
 endfunction
 
-function! variables#set_variables()
-  call variables#set_vimtex()
-  call variables#set_python()
+function! kb10uy#variables#set_variables()
+  call kb10uy#variables#set_vimtex()
+  call kb10uy#variables#set_python()
 endfunction
 
-function! variables#set_vimtex() abort
+function! kb10uy#variables#set_vimtex() abort
   let g:vimtex_compiler_progname = 'nvr'
   let g:tex_flavor = 'latex'
 endfunction
 
-function! variables#set_python() abort
+function! kb10uy#variables#set_python() abort
   let g:python_host_prog = ''
   if !empty($PYTHON3_PATH)
     let g:python3_host_prog = $PYTHON3_PATH
