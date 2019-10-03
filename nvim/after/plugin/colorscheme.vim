@@ -14,6 +14,7 @@ function! colorscheme#override_colorscheme() abort
   if colorscheme#has_transparent_bg()
     highlight Normal ctermbg=NONE
     highlight Normal guibg=NONE
+    highlight NormalFloat ctermbg=12 guibg=#2a4f54
     highlight! link SignColumn LineNr
     highlight ALEErrorSign ctermfg=red guifg=#ff0000 guibg=#073642
     highlight ALEWarningSign ctermfg=red guifg=#bf8521 guibg=#073642
