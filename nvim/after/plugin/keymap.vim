@@ -40,6 +40,7 @@ function! s:remap_vim()
   noremap <C-q> <Esc>
   inoremap <C-q> <Esc>
   tnoremap <C-q> <C-\><C-n>
+  noremap m q
 
   " Undo, Redo
   noremap z u
