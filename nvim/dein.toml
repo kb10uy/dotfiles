@@ -9,9 +9,7 @@ repo = 'Shougo/dein.vim'
 repo = 'lifepillar/vim-solarized8'
 
 [[plugins]]
-repo = 'junegunn/fzf'
-build = './install'
-merged = 0
+repo = '~/.fzf'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
