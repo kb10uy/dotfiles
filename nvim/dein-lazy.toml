@@ -45,6 +45,10 @@ on_ft = ['blade']
 repo = 'posva/vim-vue'
 on_ft = ['vue']
 
+[[plugins]]
+repo = 'Shirk/vim-gas'
+on_ft = ['asm']
+
 # IDE features
 
 [[plugins]]
