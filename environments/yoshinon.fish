@@ -18,6 +18,10 @@ set -x PATH \
   /bin \
   /sbin
 
+# gpg-agent をかわりにつかう
+set -x SSH_AGENT_PID ''
+set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh"
+
 set -x GPG_TTY (tty)
 if [ -n "$SSH_CONNECTION" ]
   set -x PINENTRY_USER_DATA 'USE_CURSES=1'
