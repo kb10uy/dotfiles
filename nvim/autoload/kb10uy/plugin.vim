@@ -8,8 +8,8 @@ function! kb10uy#plugin#setup_lsp() abort
 
   let servers = {}
   let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
-  let servers['c'] = ['clangd']
-  let servers['cpp'] = ['clangd']
+  " let servers['c'] = ['clangd']
+  " let servers['cpp'] = ['clangd']
   let servers['typescript'] = ['typescript-language-server', '--stdio']
   let servers['javascript'] = ['javascript-typescript-stdio']
   let servers['python'] = ['pyls']
