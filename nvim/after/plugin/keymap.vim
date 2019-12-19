@@ -33,6 +33,9 @@ function! s:remap_vim()
   vnoremap F "_dp
   nnoremap <C-w> <C-a>
   nnoremap <C-s> <C-x>
+  command! -complete=command -range Q <line1>,<line2>d
+  command! -complete=command -range E <line1>,<line2>c
+  command! -complete=command -range R <line1>,<line2>y
 
   " Whole operation
   noremap <M-I> gg=G2<C-O>
