@@ -1,11 +1,15 @@
-call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'tex': g:vimtex#re#deoplete
-      \ })
-
-let b:endwise_addition = '\="\\end" . matchstr(submatch(0), "{.\\{-}}")'
-let b:endwise_words = 'begin'
-let b:endwise_pattern = '\\begin{.\{-}}'
-let b:endwise_syngroups = 'texSection,texBeginEnd,texBeginEndName,texStatement'
+augroup ncm2_vimtex_setup
+  autocmd!
+  autocmd FileType tex call ncm2#register_source({
+          \ 'name': 'vimtex',
+          \ 'priority': 8,
+          \ 'scope': ['tex'],
+          \ 'mark': 'tex',
+          \ 'word_pattern': '\w+',
+          \ 'complete_pattern': 'g:vimtex#re#ncm2',
+          \ 'on_complete': ['ncm2#on_complete#omni', 'vimtex#complete#omnifunc'],
+          \ })
+augroup END
 
 inoremap <C-T> \texttt{}<Left>
 nmap <F5> <Plug>(vimtex-compile)
