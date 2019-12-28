@@ -7,7 +7,8 @@ function! kb10uy#plugin#setup_lsp() abort
   let pls_path = $HOME . '/.config/composer/vendor/bin/php-language-server.php'
 
   let servers = {}
-  let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
+  let servers['rust'] = ['ra_lsp_server']
+  " let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
   " let servers['c'] = ['clangd']
   " let servers['cpp'] = ['clangd']
   let servers['typescript'] = ['typescript-language-server', '--stdio']
