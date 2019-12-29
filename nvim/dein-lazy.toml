@@ -90,8 +90,9 @@ on_ft = ['html', 'php']
 
 [[plugins]]
 repo = 'lervag/vimtex'
-hook_source = 'call plugin#setup_tex()'
+hook_source = 'call kb10uy#plugin#setup_tex()'
 on_ft = ['tex']
+depends = ['ncm2']
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
