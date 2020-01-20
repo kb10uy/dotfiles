@@ -111,3 +111,10 @@ call s:remap_shortcut()
 call s:remap_surround()
 call s:remap_completion()
 call s:remap_fzf()
+
+" GUI で出てくるクソみたいなウィンドウを抑制
+if exists('g:GuiLoaded')
+  GuiPopupmenu 0
+  GuiTabline 0
+endif
+
