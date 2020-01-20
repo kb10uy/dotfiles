@@ -50,7 +50,7 @@ function! kb10uy#variables#set_flags() abort
 
   " nvim-qt では 1 になる
   if exists('g:GuiLoaded')
-    GuiPopupMenu 0
+    GuiPopupmenu 0
     GuiTabline 0
   endif
 endfunction
