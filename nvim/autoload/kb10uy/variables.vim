@@ -47,6 +47,12 @@ function! kb10uy#variables#set_flags() abort
   if exists('&pumblend')
     " set pumblend=20
   endif
+
+  " nvim-qt では 1 になる
+  if exists('g:GuiLoaded')
+    GuiPopupMenu 0
+    GuiTabline 0
+  endif
 endfunction
 
 function! kb10uy#variables#set_variables()
