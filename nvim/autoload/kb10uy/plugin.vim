@@ -4,13 +4,12 @@ function! kb10uy#plugin#setup_lsp() abort
   endif
 
   let rls_toolchain = empty($RLS_TOOLCHAIN) ? 'beta' : $RLS_TOOLCHAIN
-  let pls_path = $HOME . '/.config/composer/vendor/bin/php-language-server.php'
 
   let servers = {}
   let servers['typescript'] = ['typescript-language-server', '--stdio']
   let servers['javascript'] = ['javascript-typescript-stdio']
   let servers['python'] = ['pyls']
-  let servers['php'] = ['php', pls_path]
+  let servers['php'] = ['psalm-language-server']
   let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
   " let servers['rust'] = ['ra_lsp_server']
   " let servers['c'] = ['clangd']
