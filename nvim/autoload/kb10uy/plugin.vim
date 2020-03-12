@@ -13,8 +13,8 @@ function! kb10uy#plugin#setup_lsp() abort
   let servers['php'] = ['php', pls_path]
   let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
   " let servers['rust'] = ['ra_lsp_server']
-  " let servers['c'] = ['clangd']
-  " let servers['cpp'] = ['clangd']
+  let servers['c'] = ['clangd']
+  let servers['cpp'] = ['clangd']
   " let servers['haskell'] = ['hie-wrapper', '--lsp']
   " let servers['tex'] = ['digestif']
 
