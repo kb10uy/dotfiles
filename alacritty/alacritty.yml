@@ -100,9 +100,9 @@
 #tabspaces: 8
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
