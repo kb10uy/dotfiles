@@ -177,7 +177,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  #use_thin_strokes: true
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: true
@@ -486,7 +486,11 @@ background_opacity: 0.7
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
-#key_bindings:
+key_bindings:
+  - { key: Return,  mods: Command,  action: ToggleFullscreen  }
+  - { key: Comma,   mods: Command,  action: DecreaseFontSize  }
+  - { key: Period,  mods: Command,  action: IncreaseFontSize  }
+
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
