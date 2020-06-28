@@ -15,6 +15,7 @@ function! kb10uy#plugin#setup_lsp() abort
   let servers['rust'] = ['rust-analyzer']
   let servers['c'] = ['clangd']
   let servers['cpp'] = ['clangd']
+  let servers['kotlin'] = ['kotlin-language-server']
   " let servers['haskell'] = ['hie-wrapper', '--lsp']
   " let servers['tex'] = ['digestif']
 

@@ -2,11 +2,13 @@ set -x EDITOR 'nvim'
 set -x VISUAL 'nvim'
 set -x PYTHON3_PATH '/usr/bin/python3'
 set -x JAVA_HOME '/usr/lib/jvm/'(archlinux-java get)
+set -x DOTNET_ROOT '/usr/share/dotnet'
 
 set -x PATH \
   $HOME/.cargo/bin \
   $HOME/.opam/system/bin \
   $HOME/.local/bin \
+  $HOME/.local/kotlin-language-server/bin \
   $HOME/.config/composer/vendor/bin \
   $HOME/.local/share/node_modules/bin \
   $HOME/.fzf/bin \
@@ -26,5 +28,3 @@ set -x GPG_TTY (tty)
 if [ -n "$SSH_CONNECTION" ]
   set -x PINENTRY_USER_DATA 'USE_CURSES=1'
 end
-
-eval (opam env)
