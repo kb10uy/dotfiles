@@ -11,6 +11,7 @@ function! kb10uy#plugin#setup_lsp() abort
   let servers['python'] = ['pyls']
   let servers['php'] = ['php', pls_path]
   let servers['rust'] = ['rust-analyzer']
+  let servers['php'] = ['psalm-language-server']
   let servers['c'] = ['clangd']
   let servers['cpp'] = ['clangd']
   let servers['kotlin'] = ['kotlin-language-server']
