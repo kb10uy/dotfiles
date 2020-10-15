@@ -43,6 +43,7 @@ function! kb10uy#variables#set_flags() abort
   set inccommand=split
   set mouse=a
   set hidden
+  set shada="NONE"
 
   if exists('&pumblend')
     " set pumblend=20

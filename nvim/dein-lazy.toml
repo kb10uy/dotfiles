@@ -100,10 +100,6 @@ hook_source = 'call kb10uy#plugin#setup_tex()'
 on_ft = ['tex']
 depends = ['ncm2']
 
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-on_event = 'CursorHold'
-
 # Operators
 
 [[plugins]]
@@ -113,8 +109,3 @@ repo = 'kana/vim-operator-user'
 repo = 'rhysd/vim-operator-surround'
 depends = ['vim-operator-user']
 on_event = 'InsertEnter'
-
-# [[plugins]]
-# repo = 'alpaca-tc/vim-endwise.git'
-# on_event = 'InsertEnter'
-
