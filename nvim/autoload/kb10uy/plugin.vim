@@ -6,7 +6,7 @@ function! kb10uy#plugin#setup_lsp() abort
   let rls_toolchain = empty($RLS_TOOLCHAIN) ? 'beta' : $RLS_TOOLCHAIN
 
   let servers = {}
-  let servers['typescript'] = ['typescript-language-server', '--stdio']
+  let servers['typescript'] = ['javascript-typescript-stdio']
   let servers['javascript'] = ['javascript-typescript-stdio']
   let servers['python'] = ['pyls']
   " let servers['rust'] = ['rustup', 'run', rls_toolchain, 'rls']
