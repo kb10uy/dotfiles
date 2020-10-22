@@ -12,7 +12,7 @@ set -x PATH \
   $HOME/.config/composer/vendor/bin \
   $HOME/.local/share/node_modules/bin \
   $HOME/.fzf/bin \
-  /usr/local/texlive/2019/bin/x86_64-linux \
+  /usr/local/texlive/2020/bin/x86_64-linux \
   /usr/local/go/bin \
   /usr/local/ssl/bin \
   /usr/local/bin \
@@ -23,6 +23,7 @@ set -x PATH \
 # gpg-agent をかわりにつかう
 set -x SSH_AGENT_PID ''
 set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh"
+set -x LIBGL_ALWAYS_INDIRECT 1
 
 set -x GPG_TTY (tty)
 if [ -n "$SSH_CONNECTION" ]

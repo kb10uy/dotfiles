@@ -94,11 +94,11 @@ on_ft = [
 repo = 'mattn/emmet-vim'
 on_ft = ['html', 'php']
 
-[[plugins]]
-repo = 'lervag/vimtex'
-hook_source = 'call kb10uy#plugin#setup_tex()'
-on_ft = ['tex']
-depends = ['ncm2']
+# [[plugins]]
+# repo = 'lervag/vimtex'
+# hook_source = 'call kb10uy#plugin#setup_tex()'
+# on_ft = ['tex']
+# depends = ['ncm2']
 
 # Operators
 
