@@ -6,7 +6,7 @@ set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_com
 set FISH_PLATFORM (uname)
 # Neovim のクソ野郎 $COLORTERM を握り潰しやがった
 set fish_term24bit 1
-set -U FZF_LEGACY_KEYBINDINGS 0
+# set -U FZF_LEGACY_KEYBINDINGS 0
 
 # Load dependency file
 set -l dependency_file "$HOME/dotfiles/environments/"(hostname)".fish"

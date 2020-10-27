@@ -2,6 +2,7 @@
 /zsh/.zsh_history
 /nvim/.netrwhist
 /fish/functions/fisher.fish
+/fish/fish_variables
 
 .ccls-cache
 vendor

@@ -49,6 +49,10 @@ on_ft = ['vue']
 repo = 'Shirk/vim-gas'
 on_ft = ['asm']
 
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']
+
 # IDE features
 
 [[plugins]]
@@ -61,6 +65,7 @@ hook_source = 'call kb10uy#plugin#setup_completion()'
 # TODO: cpp を戻したい
 on_ft = [
   'rust', 'c', 'cpp',
+  'kotlin',
   'python',
   'ocaml', 'haskell',
   'javascript', 'typescript',
@@ -78,6 +83,7 @@ build = "bash install.sh"
 hook_source = 'call kb10uy#plugin#setup_lsp()'
 on_ft = [
   'rust', 'c', 'cpp',
+  'kotlin',
   'python',
   'haskell',
   'javascript', 'typescript',
@@ -88,15 +94,11 @@ on_ft = [
 repo = 'mattn/emmet-vim'
 on_ft = ['html', 'php']
 
-[[plugins]]
-repo = 'lervag/vimtex'
-hook_source = 'call kb10uy#plugin#setup_tex()'
-on_ft = ['tex']
-depends = ['ncm2']
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-on_event = 'CursorHold'
+# [[plugins]]
+# repo = 'lervag/vimtex'
+# hook_source = 'call kb10uy#plugin#setup_tex()'
+# on_ft = ['tex']
+# depends = ['ncm2']
 
 # Operators
 
@@ -107,8 +109,3 @@ repo = 'kana/vim-operator-user'
 repo = 'rhysd/vim-operator-surround'
 depends = ['vim-operator-user']
 on_event = 'InsertEnter'
-
-# [[plugins]]
-# repo = 'alpaca-tc/vim-endwise.git'
-# on_event = 'InsertEnter'
-

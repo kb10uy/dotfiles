@@ -16,7 +16,7 @@ repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 
 [[plugins]]
-repo = 'vim-jp/vimdoc-ja'
+repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
-repo = 'editorconfig/editorconfig-vim'
+repo = 'vim-jp/vimdoc-ja'
