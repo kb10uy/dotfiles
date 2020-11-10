@@ -2,6 +2,8 @@ set -x EDITOR 'nvim'
 set -x VISUAL 'nvim'
 set -x TRANSPARENTTERM 'iTerm2.app'
 set -x PYTHON3_PATH '/usr/local/bin/python3'
+set -x GOPATH $HOME'/.go'
+set -x GO111MODULE 'on'
 set -x JAVA_HOME (/usr/libexec/java_home)
 set -x HOMEBREW_NO_AUTO_UPDATE 1
 set -x RLS_TOOLCHAIN 'stable'
@@ -17,7 +19,7 @@ set -x PATH \
   $HOME/.local/share/node_modules/bin \
   $HOME/.fzf/bin \
   /usr/local/bin \
-  /use/local/go/bin \
+  /usr/local/go/bin \
   /usr/bin \
   /bin
 
