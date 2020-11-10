@@ -6,7 +6,7 @@ function! kb10uy#plugin#setup_lsp() abort
   let pls_path = $HOME . '/.config/composer/vendor/bin/php-language-server.php'
 
   let servers = {}
-  let servers['typescript'] = ['javascript-typescript-stdio']
+  let servers['typescript'] = ['typescript-language-server', '--stdio']
   let servers['javascript'] = ['javascript-typescript-stdio']
   let servers['python'] = ['pyls']
   let servers['php'] = ['php', pls_path]
