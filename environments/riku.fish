@@ -17,6 +17,7 @@ set -x PATH \
   $HOME/.local/share/node_modules/bin \
   $HOME/.fzf/bin \
   /usr/local/bin \
+  /use/local/go/bin \
   /usr/bin \
   /bin
 
