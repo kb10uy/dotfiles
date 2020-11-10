@@ -11,6 +11,7 @@ set -x RLS_TOOLCHAIN 'stable'
 set -x PATH \
   /usr/local/texlive/2019/bin/x86_64-darwin \
   $HOME/.cargo/bin \
+  $HOME/.go/bin \
   $HOME/.composer/vendor/bin \
   $HOME/.config/composer/vendor/bin \
   $HOME/Library/Python/3.7/bin \
