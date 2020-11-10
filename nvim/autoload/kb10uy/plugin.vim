@@ -8,7 +8,7 @@ function! kb10uy#plugin#setup_lsp() abort
   let servers = {}
   let servers['c'] = ['clangd']
   let servers['cpp'] = ['clangd']
-  let servers['go'] = ['gopls']
+  let servers['go'] = ['go-langserver']
   let servers['javascript'] = ['javascript-typescript-stdio']
   let servers['kotlin'] = ['kotlin-language-server']
   let servers['php'] = ['php', pls_path]
