@@ -6,15 +6,15 @@ function! kb10uy#plugin#setup_lsp() abort
   let pls_path = $HOME . '/.config/composer/vendor/bin/php-language-server.php'
 
   let servers = {}
-  let servers['typescript'] = ['typescript-language-server', '--stdio']
-  let servers['javascript'] = ['javascript-typescript-stdio']
-  let servers['python'] = ['pyls']
-  let servers['php'] = ['php', pls_path]
-  let servers['rust'] = ['rust-analyzer']
-  let servers['php'] = ['psalm-language-server']
   let servers['c'] = ['clangd']
   let servers['cpp'] = ['clangd']
+  let servers['go'] = ['gopls']
+  let servers['javascript'] = ['javascript-typescript-stdio']
   let servers['kotlin'] = ['kotlin-language-server']
+  let servers['php'] = ['php', pls_path]
+  let servers['python'] = ['pyls']
+  let servers['rust'] = ['rust-analyzer']
+  let servers['typescript'] = ['typescript-language-server', '--stdio']
 
   let g:LanguageClient_serverCommands = servers
   let g:LanguageClient_diagnosticsSignsMax = 2
