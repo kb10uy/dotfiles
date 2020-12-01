@@ -14,7 +14,7 @@ set -x PATH \
   $HOME/.go/bin \
   $HOME/.composer/vendor/bin \
   $HOME/.config/composer/vendor/bin \
-  $HOME/Library/Python/3.7/bin \
+  $HOME/Library/Python/3.9/bin \
   $HOME/.poetry/bin \
   $HOME/.local/bin \
   $HOME/.local/share/node_modules/bin \
