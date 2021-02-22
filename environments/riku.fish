@@ -24,4 +24,5 @@ set -x PATH \
   /usr/bin \
   /bin
 
+source $HOME/.phpbrew/phpbrew.fish
 source (nodenv init - | psub)
