@@ -10,6 +10,9 @@ set -x PATH \
   /usr/local/go/bin \
   /usr/local/ssl/bin \
   /usr/local/bin \
+  /usr/local/lib/node_modules/yarn/bin/ \
   /usr/bin \
   /bin \
   /sbin
+
+source $HOME/.phpbrew/phpbrew.fish
